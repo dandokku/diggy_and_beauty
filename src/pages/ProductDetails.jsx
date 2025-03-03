@@ -9,7 +9,7 @@ const ProductDetails = () => {
 
   return (
     <motion.div
-      className="bg-lightbg min-h-screen pt-24"
+      className="bg-lightbg min-h-screen pt-24 mt-16"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
@@ -22,16 +22,16 @@ const ProductDetails = () => {
         />
 
         <div className="flex flex-col gap-6">
-          <h1 className="text-4xl font-bold text-text">{product.name}</h1>
-          <p className="text-primary text-xl">₦{product.price}</p>
-          <p className="text-text leading-relaxed">{product.description}</p>
+          <h1 className="text-4xl font-bold glitter-text">{product.name}</h1>
+          <p className="text-white text-xl">₦{product.price}</p>
+          <p className="text-white leading-relaxed">{product.description}</p>
 
           {/* Order Buttons */}
           <OrderButton
             productName={product.name}
             price={product.price}
-            phone="+2349012345678" // Replace with your WhatsApp number
-            email="diggybeauty@gmail.com"
+            phone="+2347034781890" // Replace with your WhatsApp number
+            email="jesulobadaniel1@gmail.com"
           />
         </div>
       </div>

@@ -8,7 +8,7 @@ export default {
         primary: "#d7a31a", 
         white: "#FFFFFF",
         accent: "#bd8cbf", 
-        text: "#291115",
+        text: "#212121",
         lightbg: "#f6f6f6",
         whitetext: "#f6f6f1",
       },

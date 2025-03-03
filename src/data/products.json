@@ -1,21 +1,142 @@
 [
-    {
-      "id": 1,
-      "name": "Luxury Bone Straight Wig",
-      "price": "85,000",
-      "image": "src/assets/images/harper-sunday-O1DhTK0_1iQ-unsplash.jpg"
-    },
-    {
-      "id": 2,
-      "name": "Curly Brazilian Wig",
-      "price": "65,000",
-      "image": "src/assets/images/malvestida-u79wy47kvVs-unsplash.jpg"
-    },
-    {
-      "id": 3,
-      "name": "Frontal Wig 20 Inches",
-      "price": "120,000",
-      "image": "src/assets/images/vadim-sherbakov-tCICLJ5ktBE-unsplash.jpg"
-    }
-  ]
-  
+  {
+    "id": 1,
+    "name": "Luxury Bone Straight Wig",
+    "description": "100% human hair, silky texture with natural shine.",
+    "price": "85,000",
+    "image": "data:image/jpeg;base64,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"
+  },
+  {
+    "id": 2,
+    "name": "HD Closure Wig",
+    "description": "Invisible lace for a flawless hairline.",
+    "price": "75,000",
+    "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLbYiaBeepR8gqr4r9460ccGfRC8lxB3V6iw&s"
+  },
+  {
+    "id": 3,
+    "name": "Glow Up Body Oil",
+    "description": "Non-greasy luxury oil for glowing skin.",
+    "price": "12,000",
+    "image": "src/assets/images/body-oil.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Silk Hair Bonnet",
+    "description": "Protects hair from breakage overnight.",
+    "price": "5,000",
+    "image": "src/assets/images/hair-bonnet.jpg"
+  },
+  {
+    "id": 5,
+    "name": "24K Gold Lip Gloss",
+    "description": "Hydrating lip gloss with real gold shimmer.",
+    "price": "4,500",
+    "image": "src/assets/images/lip-gloss.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Luxury Mink Lashes",
+    "description": "Reusable, soft, and natural-looking lashes.",
+    "price": "3,500",
+    "image": "src/assets/images/mink-lashes.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Brow Growth Serum",
+    "description": "Boosts natural brow growth in 4 weeks.",
+    "price": "7,000",
+    "image": "src/assets/images/brow-serum.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Edge Control Gel",
+    "description": "Long-lasting hold without flaking.",
+    "price": "3,000",
+    "image": "src/assets/images/edge-gel.jpg"
+  },
+  {
+    "id": 9,
+    "name": "Rose Water Facial Toner",
+    "description": "Hydrating & refreshing facial toner.",
+    "price": "6,000",
+    "image": "src/assets/images/rose-toner.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Honey Glow Body Scrub",
+    "description": "Exfoliates dead skin cells for a radiant glow.",
+    "price": "10,000",
+    "image": "src/assets/images/body-scrub.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Luxury Press On Nails",
+    "description": "Reusable, salon-quality nails in different styles.",
+    "price": "6,500",
+    "image": "src/assets/images/press-on-nails.jpg"
+  },
+  {
+    "id": 12,
+    "name": "Shea Butter Lip Balm",
+    "description": "Moisturizes dry, cracked lips.",
+    "price": "2,500",
+    "image": "src/assets/images/lip-balm.jpg"
+  },
+  {
+    "id": 13,
+    "name": "Hair Growth Oil",
+    "description": "Fast hair growth and thickness guaranteed.",
+    "price": "8,000",
+    "image": "src/assets/images/hair-oil.jpg"
+  },
+  {
+    "id": 14,
+    "name": "Luxury Edge Brush",
+    "description": "For precise baby hair styling.",
+    "price": "2,000",
+    "image": "src/assets/images/edge-brush.jpg"
+  },
+  {
+    "id": 15,
+    "name": "Coconut Glow Body Butter",
+    "description": "Deep moisturizing with a tropical scent.",
+    "price": "9,500",
+    "image": "src/assets/images/body-butter.jpg"
+  },
+  {
+    "id": 16,
+    "name": "Nude Matte Lipstick",
+    "description": "Long-lasting velvet matte finish.",
+    "price": "4,800",
+    "image": "src/assets/images/nude-lipstick.jpg"
+  },
+  {
+    "id": 17,
+    "name": "Microfiber Hair Towel",
+    "description": "Dries hair faster without frizz.",
+    "price": "3,500",
+    "image": "src/assets/images/hair-towel.jpg"
+  },
+  {
+    "id": 18,
+    "name": "Luxury Satin Scrunchies",
+    "description": "Prevents hair breakage and adds style.",
+    "price": "2,500",
+    "image": "src/assets/images/scrunchies.jpg"
+  },
+  {
+    "id": 19,
+    "name": "Pink Blossom Body Mist",
+    "description": "Fresh floral fragrance for everyday use.",
+    "price": "6,000",
+    "image": "src/assets/images/body-mist.jpg"
+  },
+  {
+    "id": 20,
+    "name": "Glass Skin Facial Serum",
+    "description": "Gives your face that natural glassy glow.",
+    "price": "11,000",
+    "image": "src/assets/images/face-serum.jpg"
+  }
+]
