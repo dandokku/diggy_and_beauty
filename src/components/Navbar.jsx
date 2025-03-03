@@ -66,7 +66,7 @@ const closeModal = () => {
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-8 text-white">
-            {["Home", "Shop", "About", "Contact"].map((link, index) => (
+            {["Home", "Product", "About", "Contact"].map((link, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.1 }}

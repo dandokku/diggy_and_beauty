@@ -5,7 +5,8 @@ import Cart from "./components/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/AboutPage";
-import Shop from "./pages/Shop";
+import ProductPage from "./pages/ProductPage";
+import ProductDetails from "./pages/ProductDetails";
 import ContactPage from "./pages/ContactPage";
 
 
@@ -40,7 +41,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
         <Route path="/about" element={<About />} />
-        <Route path="/shop" element={<Shop />} />
+        <Route path="/product" element={<ProductPage />} />
+        <Route path="/product/:id" element={<ProductDetails />} />
         <Route path="/contact" element={<ContactPage />} />
       </Routes>
 

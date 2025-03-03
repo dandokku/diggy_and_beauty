@@ -1,24 +1,16 @@
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
 
-const ProductCard = ({ image, name, price, onClick }) => {
+const ProductCard = ({ product }) => {
   return (
-    <motion.div
-      whileHover={{
-        scale: 1.05,
-        rotateY: 10,
-        rotateX: 10,
-        boxShadow: "0px 20px 40px rgba(215, 163, 26, 0.4)",
-      }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      onClick={onClick}
-      className="bg-lightbg rounded-lg overflow-hidden p-6 cursor-pointer shadow-lg relative"
-    >
-      <img src={image} alt={name} className="w-full h-64 object-cover rounded-lg" />
-      <div className="mt-4">
-        <h3 className="text-xl font-semibold glitter-text">{name}</h3>
-        <p className="text-primary mt-2">₦{price}</p>
+    <Link to={`/product/${product.id}`}>
+      <div className="bg-white shadow-lg rounded-lg overflow-hidden cursor-pointer hover:shadow-xl transition">
+        <img src={product.image} alt={product.name} className="w-full h-64 object-cover" />
+        <div className="p-6">
+          <h2 className="text-text text-lg font-bold">{product.name}</h2>
+          <p className="text-primary text-lg mt-2">₦{product.price}</p>
+        </div>
       </div>
-    </motion.div>
+    </Link>
   );
 };
 
