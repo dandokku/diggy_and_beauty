@@ -1,0 +1,7 @@
+TODO:
+- Create product page
+    - Display product
+    - Add to cart
+    - Checkout to email first, then whatsapp later
+- Create About page
+- Design Contact page (contact form w emailjs)
