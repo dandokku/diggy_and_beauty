@@ -1,17 +1,14 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
+import { FiX } from "react-icons/fi"; // Close Icon
 
 const SubscriptionModal = ({ show, onClose }) => {
   useEffect(() => {
-    const timeout = setTimeout(() => {
-      if (show) {
-        document.body.style.overflow = "hidden"; // Lock Scroll
-      }
-    }, 100);
-
+    if (show) {
+      document.body.style.overflow = "hidden"; // Lock Scroll
+    }
     return () => {
       document.body.style.overflow = "auto"; // Unlock Scroll
-      clearTimeout(timeout);
     };
   }, [show]);
 
@@ -22,15 +19,27 @@ const SubscriptionModal = ({ show, onClose }) => {
       initial={{ opacity: 0, scale: 0.9 }}
       animate={{ opacity: 1, scale: 1 }}
       exit={{ opacity: 0, scale: 0.8 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.5, ease: "easeInOut" }}
       className="fixed inset-0 bg-black/70 backdrop-blur-md flex items-center justify-center z-50"
     >
-      <div className="bg-[#1a1818] p-8 rounded-lg w-11/12 md:w-1/3 text-center text-white shadow-lg">
+      {/* Modal Container */}
+      <div className="relative bg-[#1a1818] p-8 rounded-lg w-11/12 md:w-1/3 text-center text-white shadow-lg">
+
+        {/* Close Button */}
+        <motion.div
+          whileHover={{ rotate: 180, scale: 1.2 }}
+          transition={{ duration: 0.3 }}
+          className="absolute top-4 right-4 cursor-pointer text-white hover:text-primary"
+          onClick={onClose}
+        >
+          <FiX size={24} />
+        </motion.div>
+
         <h2 className="text-2xl font-bold text-primary mb-4">
           Subscribe to Our Newsletter 📩
         </h2>
         <p className="text-white mb-6">
-          Be the first to know about our latest products and offers!
+          Stay updated with our latest products and special offers!
         </p>
 
         <input
