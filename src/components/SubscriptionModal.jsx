@@ -35,7 +35,7 @@ const SubscriptionModal = ({ show, onClose }) => {
           <FiX size={24} />
         </motion.div>
 
-        <h2 className="text-2xl font-bold text-primary mb-4">
+        <h2 className="text-2xl font-bold text-primary mb-4 glitter-text">
           Subscribe to Our Newsletter 📩
         </h2>
         <p className="text-white mb-6">
