@@ -2,10 +2,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProductCard from './components/ProductCard';
 import CartPage from './pages/CartPage';
+import "../src/App.css"
 
 const products = [
-  { name: 'Luxury Wig 1', price: '250', image: '/assets/wig1.jpg' },
-  { name: 'Luxury Wig 2', price: '300', image: '/assets/wig2.jpg' },
+  { name: 'Luxury Wig 1', price: '250', image: '/assets/react.svg' },
+  { name: 'Luxury Wig 2', price: '300', image: '/assets/react.svg' },
 ];
 
 function App() {
@@ -17,6 +18,10 @@ function App() {
         {products.map((p, i) => (
           <ProductCard key={i} product={p} />
         ))}
+        <div className="bg-primary text-white bg-yellow-500 text-3xl p-10 text-center">
+  Tailwind is Finally Working! 🎯🔥
+</div>
+
       </div>
       <CartPage />
     </>
