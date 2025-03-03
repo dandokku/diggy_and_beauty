@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
-import About from "./pages/About";
+import About from "./pages/AboutPage";
 import Shop from "./pages/Shop";
 import ContactPage from "./pages/ContactPage";
 

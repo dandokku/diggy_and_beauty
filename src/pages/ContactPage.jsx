@@ -4,7 +4,7 @@ import Map from "../components/Map";
 
 const ContactPage = () => {
   return (
-    <section id="contact" className="py-20 mt-10 bg-[#1a1818] text-white">
+    <section id="contact" className="py-20 mt-16 bg-[#1a1818] text-white">
       <div className="container mx-auto px-6">
         <h2 className="text-4xl font-bold text-center text-primary mb-10 uppercase">
           Contact Us
