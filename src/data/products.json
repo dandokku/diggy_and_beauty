@@ -1,0 +1,21 @@
+[
+    {
+      "id": 1,
+      "name": "Luxury Bone Straight Wig",
+      "price": "85,000",
+      "image": "src/assets/images/harper-sunday-O1DhTK0_1iQ-unsplash.jpg"
+    },
+    {
+      "id": 2,
+      "name": "Curly Brazilian Wig",
+      "price": "65,000",
+      "image": "src/assets/images/malvestida-u79wy47kvVs-unsplash.jpg"
+    },
+    {
+      "id": 3,
+      "name": "Frontal Wig 20 Inches",
+      "price": "120,000",
+      "image": "src/assets/images/vadim-sherbakov-tCICLJ5ktBE-unsplash.jpg"
+    }
+  ]
+  

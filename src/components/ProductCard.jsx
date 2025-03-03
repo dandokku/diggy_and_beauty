@@ -1,12 +1,26 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-const ProductCard = ({ product }) => {
+const ProductCard = ({ image, name, price }) => {
   return (
-    <motion.div className="bg-white p-4 rounded-lg shadow-md" whileHover={{ scale: 1.05 }}>
-      <img src={product.image} alt={product.name} className="w-full h-72 object-cover rounded-lg mb-4" />
-      <h3 className="text-xl font-semibold">{product.name}</h3>
-      <p className="text-primary mt-2">${product.price}</p>
-      <button className="mt-4">View Details</button>
+    <motion.div
+      whileHover={{
+        scale: 1.05,
+        rotateY: 10,
+        rotateX: 10,
+        boxShadow: "0px 20px 40px rgba(215, 163, 26, 0.4)",
+      }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+      className="bg-lightbg rounded-lg overflow-hidden p-6 cursor-pointer shadow-lg relative"
+    >
+      <img
+        src={image}
+        alt={name}
+        className="w-full h-64 object-cover rounded-lg"
+      />
+      <div className="mt-4">
+        <h3 className="text-xl font-semibold glitter-text">{name}</h3>
+        <p className="text-primary mt-2">₦{price}</p>
+      </div>
     </motion.div>
   );
 };
