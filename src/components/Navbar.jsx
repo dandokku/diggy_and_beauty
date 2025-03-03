@@ -133,7 +133,7 @@ const closeModal = () => {
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        {["Home", "Shop", "About", "Contact"].map((link, index) => (
+        {["Home", "Product", "About", "Contact"].map((link, index) => (
           <motion.li
             key={index}
             whileHover={{ scale: 1.1 }}
