@@ -6,11 +6,12 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#d7a31a',
-        accent: '#82d47c',
-        bg: '#111827',
-        text: '#291115',
-        lightbg: '#e4f0ff',
+        bg: "#1a1a1a", // Deep Black
+        primary: "#d7a31a", // Gold
+        white: "#FFFFFF",
+        accent: "#bd8cbf", // Purple Pink Luxury
+        text: "#291115",
+        lightbg: "#f6f6f6",
       },
     },
   },

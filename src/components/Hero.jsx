@@ -1,20 +1,36 @@
-import { useState } from 'react';
-import SubscriptionModal from './SubscriptionModal';
+import { motion } from "framer-motion";
+import Button from "./Button";
 
 const Hero = () => {
-  const [showModal, setShowModal] = useState(true);
-
   return (
-    <div className="relative h-screen bg-[url('/assets/hero.jpg')] bg-cover bg-center">
-      {showModal && <SubscriptionModal setShowModal={setShowModal} />}
-      <div className="absolute inset-0 bg-black bg-opacity-40 flex flex-col items-center justify-center text-white">
-        <h1 className="text-5xl font-bold mb-4 animate-fade">Luxury Wigs & Accessories</h1>
-        <p className="text-lg max-w-md text-center animate-slideUp">
-          Discover premium quality wigs tailored to your unique beauty.
-        </p>
-        <button className="mt-6 animate-pulse">Shop Now</button>
-      </div>
-    </div>
+    <section className="h-screen w-full bg-bg text-white flex flex-col items-center justify-center text-center">
+      <motion.h1
+        initial={{ opacity: 0, y: 50 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: "easeOut" }}
+        className="text-5xl md:text-7xl font-bold leading-snug tracking-wider glitter-text"
+      >
+        Discover Timeless <span className="text-primary">Beauty</span>
+      </motion.h1>
+
+      <motion.p
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 1, duration: 1 }}
+        className="mt-4 text-lg md:text-xl text-accent max-w-lg"
+      >
+        Elevate your style with premium wigs & beauty accessories.
+      </motion.p>
+
+      <motion.div
+        initial={{ opacity: 0, y: 30 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 1.5, duration: 1 }}
+        className="mt-8"
+      >
+        <Button text="Shop Now" />
+      </motion.div>
+    </section>
   );
 };
 

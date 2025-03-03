@@ -3,3 +3,32 @@
 @tailwind utilities;
 
 @import "tailwindcss";
+
+body {
+    background: linear-gradient(145deg, #1a1a1a, #121212);
+  }
+  
+  h1 span {
+    background: linear-gradient(90deg, #d7a31a, #bd8cbf);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  @keyframes glitter {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+  
+  .glitter-text {
+    background: linear-gradient(90deg, #d7a31a, #bd8cbf, #ffffff);
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: glitter 6s ease infinite;
+  }
+  
+  
