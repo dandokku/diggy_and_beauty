@@ -8,6 +8,13 @@ import SubscriptionModal from "./SubscriptionModal";
 const Navbar = ({ cart }) => {
   const [open, setOpen] = useState(false);
   const [showSearch, setShowSearch] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+useEffect(() => {
+  window.addEventListener("scroll", () => {
+    setScrolled(window.scrollY > 50);
+  });
+}, []);
 
   const toggleMenu = () => {
     setOpen(!open);

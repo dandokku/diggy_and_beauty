@@ -1,4 +1,5 @@
 import { FiInstagram, FiTwitter, FiFacebook, FiMail } from "react-icons/fi";
+import { Link as ScrollLink } from "react-scroll";
 
 const Footer = () => {
   return (
@@ -17,12 +18,20 @@ const Footer = () => {
         <div>
           <h3 className="text-primary text-xl font-bold uppercase mb-4">Quick Links</h3>
           <ul className="space-y-3">
-            {["Home", "Shop", "About", "Contact"].map((link, index) => (
-              <li key={index} className="hover:text-primary cursor-pointer transition duration-300">
-                {link}
-              </li>
-            ))}
-          </ul>
+  {["Home", "Shop", "About", "Contact"].map((link, index) => (
+    <li key={index} className="hover:text-primary cursor-pointer transition duration-300">
+      <ScrollLink
+        to={link.toLowerCase()}
+        smooth={true}
+        duration={800}
+        offset={-100}
+        spy={true}
+      >
+        {link}
+      </ScrollLink>
+    </li>
+  ))}
+</ul>
         </div>
 
         {/* Contact Section */}

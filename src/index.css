@@ -1,11 +1,16 @@
+@import "tailwindcss";
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-@import "tailwindcss";
 
 body {
     background: linear-gradient(145deg, #1a1a1a, #121212);
+  }
+  
+  html {
+    scroll-behavior: smooth;
   }
   
   h1 span {
@@ -47,4 +52,5 @@ body {
     transform: scale(1.2);
     transition: all 0.3s ease-in-out;
   }
+  
   

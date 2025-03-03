@@ -6,10 +6,17 @@ import ScrollToTop from "./components/ScrollToTop";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Shop from "./pages/Shop";
-import Contact from "./pages/Contact";
-import { useState } from "react";
+import ContactPage from "./pages/ContactPage";
+
+
+import { useState, useEffect } from "react";
+import { animateScroll } from "react-scroll";
 
 function App() {
+  useEffect(() => {
+    animateScroll.scrollToTop({ duration: 1000, smooth: "easeInOutQuad" });
+  }, []);
+
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
 
@@ -34,7 +41,7 @@ function App() {
         <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
         <Route path="/about" element={<About />} />
         <Route path="/shop" element={<Shop />} />
-        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact" element={<ContactPage />} />
       </Routes>
 
       <Footer />
