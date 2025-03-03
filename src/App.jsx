@@ -1,37 +1,17 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
-import Hero from "./components/Hero";
-import ProductCard from "./components/ProductCard";
-import Modal from "./components/Modal";
-import products from "./data/products.json";
-import Cart from "./components/Cart";
-import Instagram from "./components/Instagram";
-import Contact from "./components/Contact";
 import Footer from "./components/Footer";
-import Loader from "./components/Loader";
+import Cart from "./components/Cart";
 import ScrollToTop from "./components/ScrollToTop";
-
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Shop from "./pages/Shop";
+import Contact from "./pages/Contact";
 import { useState } from "react";
 
 function App() {
-  const [selectedProduct, setSelectedProduct] = useState(null);
   const [cart, setCart] = useState([]);
   const [showCart, setShowCart] = useState(false);
-
-  const handleOpenModal = (product) => {
-    setSelectedProduct(product);
-    document.body.style.overflow = "hidden";
-  };
-
-  const handleCloseModal = () => {
-    setSelectedProduct(null);
-    document.body.style.overflow = "auto";
-  };
-
-  const handleAddToCart = () => {
-    setCart([...cart, selectedProduct]);
-    handleCloseModal();
-    alert(`✅ ${selectedProduct.name} added to cart!`);
-  };
 
   const handleRemoveFromCart = (index) => {
     const newCart = cart.filter((_, i) => i !== index);
@@ -39,30 +19,27 @@ function App() {
   };
 
   return (
-    <div>
-          <Loader />
-      <Navbar cartCount={cart.length} onCartClick={() => setShowCart(!showCart)} />
-      <Hero />
+    <Router>
+      {/* Navbar */}
+      <Navbar
+        cart={cart}
+        cartCount={cart.length}
+        onCartClick={() => setShowCart(!showCart)}
+      />
 
-      <section className="py-16">
-        <div className="container mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-          {products.map((product) => (
-            <ProductCard key={product.id} {...product} onClick={() => handleOpenModal(product)} />
-          ))}
-        </div>
-      </section>
-
-      {selectedProduct && (
-        <Modal product={selectedProduct} onClose={handleCloseModal} onAddToCart={handleAddToCart} />
-      )}
-
+      {/* Cart Sidebar */}
       {showCart && <Cart cart={cart} onRemove={handleRemoveFromCart} />}
-      <Instagram />
-      <Contact />
-      <Footer />
 
+      <Routes>
+        <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/shop" element={<Shop />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+
+      <Footer />
       <ScrollToTop />
-    </div>
+    </Router>
   );
 }
 

@@ -23,7 +23,7 @@ const Modal = ({ product, onClose, onAddToCart }) => {
         <img src={product.image} alt={product.name} className="w-full rounded-lg mb-6" />
         <h2 className="text-3xl font-bold glitter-text">{product.name}</h2>
         <p className="mt-4 text-accent">
-          This wig will give you **soft life + sweet girl era** energy 😍✨.  
+          This wig will give you soft life + sweet girl era energy 😍✨.  
           100% luxury, no wahala.
         </p>
         <p className="mt-2 text-primary text-xl">₦{product.price}</p>
