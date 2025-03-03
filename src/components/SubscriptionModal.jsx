@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi"; // Close Icon
+import Button from "./Button";
 
 const SubscriptionModal = ({ show, onClose }) => {
   useEffect(() => {
@@ -47,12 +48,11 @@ const SubscriptionModal = ({ show, onClose }) => {
           placeholder="Enter your email"
           className="w-full p-3 rounded-md bg-lightbg text-bg mb-4 outline-none focus:ring-2 ring-primary"
         />
-        <button
+        <Button
+          text="Subscribe"
           onClick={onClose}
           className="bg-primary text-bg py-2 px-6 rounded-md hover:bg-[#b48f18] transition duration-300"
-        >
-          Subscribe
-        </button>
+        />
       </div>
     </motion.div>
   );
