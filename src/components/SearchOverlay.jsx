@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { FiX } from "react-icons/fi";
 
-const SearchOverlay = ({ show, onClose }) => {
+const SearchOverlay = ({ show, onClose, products, setQuery }) => {
+  const [input, setInput] = useState("");
+
+  const handleChange = (e) => {
+    setInput(e.target.value);
+    setQuery(e.target.value);
+  };
+
   return (
     <>
       {show && (
@@ -16,15 +24,18 @@ const SearchOverlay = ({ show, onClose }) => {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.8, opacity: 0 }}
             transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
-            className="bg-[#1a1818] p-8 rounded-lg shadow-xl w-[90%] md:w-[600px] text-center"
+            className="bg-[#1a1818] p-8 rounded-lg shadow-xl w-[90%] md:w-[600px] text-center relative"
           >
-            {/* Close Icon */}
+            {/* Close Button */}
             <FiX
               className="text-white text-3xl cursor-pointer hover:text-primary absolute top-6 right-6"
-              onClick={onClose}
+              onClick={() => {
+                setInput("");
+                setQuery("");
+                onClose();
+              }}
             />
 
-            {/* Title */}
             <h2 className="text-3xl font-bold glitter-text text-primary mb-6">
               What are you looking for? 🔍
             </h2>
@@ -32,7 +43,9 @@ const SearchOverlay = ({ show, onClose }) => {
             {/* Search Input */}
             <motion.input
               type="text"
-              placeholder="Type your product name..."
+              placeholder="Type product name..."
+              value={input}
+              onChange={handleChange}
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}

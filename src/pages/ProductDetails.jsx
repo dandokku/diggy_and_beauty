@@ -3,7 +3,6 @@ import products from "../data/products.json";
 import OrderButton from "../components/OrderButton";
 import { motion } from "framer-motion";
 
-
 const ProductDetails = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));

@@ -99,25 +99,33 @@ const Navbar = () => {
 
             {/* Cart Icon */}
             <Link to="/cart">
-  <motion.div
-    whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
-    className="relative cursor-pointer text-white hover:text-primary transition"
-  >
-    <FiShoppingCart size={24} />
-    {cart.length > 0 && (
-      <span className="absolute top-0 right-0 bg-primary text-bg text-xs w-5 h-5 rounded-full flex items-center justify-center">
-        {cart.length}
-      </span>
-    )}
-  </motion.div>
-</Link>
+              <motion.div
+                whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
+                className="relative cursor-pointer text-white hover:text-primary transition"
+              >
+                <FiShoppingCart size={24} />
+                {cart.length > 0 && (
+                  <span className="absolute top-0 right-0 bg-primary text-bg text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                    {cart.length}
+                  </span>
+                )}
+              </motion.div>
+            </Link>
 
             {/* Mobile Menu Icon */}
             <div className="md:hidden">
               {open ? (
-                <FiX size={30} onClick={toggleMenu} className="cursor-pointer" />
+                <FiX
+                  size={30}
+                  onClick={toggleMenu}
+                  className="cursor-pointer"
+                />
               ) : (
-                <FiMenu size={30} onClick={toggleMenu} className="cursor-pointer" />
+                <FiMenu
+                  size={30}
+                  onClick={toggleMenu}
+                  className="cursor-pointer"
+                />
               )}
             </div>
           </div>
@@ -129,7 +137,7 @@ const Navbar = () => {
         initial={{ x: "100%" }}
         animate={{ x: open ? 0 : "100%" }}
         transition={{ duration: 0.5, ease: "easeInOut" }}
-        className={`fixed top-0 right-0 w-3/4 h-full bg-[#1a1818]/90 backdrop-blur-lg text-white flex flex-col items-center gap-10 pt-24 z-40 ${
+        className={`fixed top-0 right-0 w-3/4 h-full bg-[#1a1818]/90 backdrop-blur-lg text-white flex flex-col items-center gap-10 pt-16 z-40 ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
@@ -139,7 +147,10 @@ const Navbar = () => {
             whileHover={{ scale: 1.1 }}
             className="text-lg uppercase tracking-wide hover:text-primary"
           >
-            <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`} onClick={toggleMenu}>
+            <Link
+              to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
+              onClick={toggleMenu}
+            >
               {link}
             </Link>
           </motion.li>

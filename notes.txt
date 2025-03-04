@@ -1,6 +1,6 @@
 TODO:
-- Create product page
-    - Display product
-    - Checkout to email first, then whatsapp later
+- Don't forget to change the whatsapp numberrrr and emaillll
+- fix mini design issues
+- make contact form to work
 
-Don't forget to change the whatsapp numberrrr and emaillll
+- remove all traces of gpt

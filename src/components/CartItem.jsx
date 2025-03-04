@@ -6,7 +6,11 @@ const CartItem = ({ item }) => {
 
   return (
     <div className="flex justify-between items-center mb-4">
-      <img src={item.image} alt={item.name} className="w-16 h-16 object-cover rounded" />
+      <img
+        src={item.image}
+        alt={item.name}
+        className="w-16 h-16 object-cover rounded"
+      />
       <div>
         <h3 className="text-text">{item.name}</h3>
         <p className="text-primary">₦{item.price}</p>
