@@ -30,7 +30,7 @@ const ProductDetails = () => {
           <OrderButton
             productName={product.name}
             price={product.price}
-            phone="+2347034781890" // Replace with your WhatsApp number
+            phone="+2348104618586" // Replace with your WhatsApp number
             email="jesulobadaniel1@gmail.com"
           />
         </div>
