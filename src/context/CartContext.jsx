@@ -4,9 +4,7 @@ import { toast } from "react-toastify";
 // Create Cart Context
 const CartContext = createContext();
 
-// Cart Provider Component
 export const CartProvider = ({ children }) => {
-  // Retrieve Cart from Local Storage on Initial Load
   const [cart, setCart] = useState(() => {
     const savedCart = localStorage.getItem("diggy_cart");
     return savedCart ? JSON.parse(savedCart) : [];
@@ -20,34 +18,40 @@ export const CartProvider = ({ children }) => {
   // Add to Cart Function
   const addToCart = (product) => {
     setCart((prevCart) => {
-      const existingProductIndex = prevCart.findIndex(
-        (item) => item.id === product.id
-      );
+      const existingProduct = prevCart.find((item) => item.id === product.id);
 
-      toast.success(`${product.name} added to cart ✅`, {
-        position: "top-right",
-        autoClose: 3000,
-        theme: "dark",
-      });
+      if (existingProduct) {
+        toast.success(`${product.name} added to cart ✅`, {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "dark",
+        });
 
-      if (existingProductIndex !== -1) {
-        const updatedCart = [...prevCart];
-        updatedCart[existingProductIndex].quantity += 1;
-        return updatedCart;
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + 1 }
+            : item
+        );
       } else {
+        toast.success(`${product.name} added to cart ✅`, {
+          position: "top-right",
+          autoClose: 3000,
+          theme: "dark",
+        });
+
         return [...prevCart, { ...product, quantity: 1 }];
       }
     });
   };
 
-  // Remove from Cart by Index
-  const removeFromCart = (index) => {
-    setCart((prevCart) => prevCart.filter((_, i) => i !== index));
+  // Remove from Cart by Product ID
+  const removeFromCart = (id) => {
+    setCart((prevCart) => prevCart.filter((item) => item.id !== id));
     toast.info("Item removed from cart 🚫", {
-        position: "top-right",
-        autoClose: 3000,
-        theme: "dark",
-      });
+      position: "top-right",
+      autoClose: 3000,
+      theme: "dark",
+    });
   };
 
   // Decrease Quantity
@@ -64,6 +68,11 @@ export const CartProvider = ({ children }) => {
   // Clear Cart
   const clearCart = () => {
     setCart([]);
+    toast.info("Cart cleared 🗑️", {
+      position: "top-right",
+      autoClose: 3000,
+      theme: "dark",
+    });
   };
 
   // Total Price Calculation
@@ -87,7 +96,6 @@ export const CartProvider = ({ children }) => {
   );
 };
 
-// Custom Hook to Use Cart Context
 export const useCart = () => {
   const context = useContext(CartContext);
   if (!context) {

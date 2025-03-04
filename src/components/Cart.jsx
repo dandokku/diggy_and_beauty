@@ -3,7 +3,7 @@ import { FiTrash } from "react-icons/fi";
 import OrderButton from "../components/OrderButton";
 
 const Cart = () => {
-  const { cart, removeFromCart, totalPrice, clearCart } = useCart();
+  const { cart, removeFromCart, getTotalPrice, clearCart } = useCart();
 
   return (
     <div className="bg-lightbg min-h-screen pt-24">
@@ -19,22 +19,23 @@ const Cart = () => {
         ) : (
           <>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {cart.map((item, index) => (
+              {cart.map((item) => (
                 <div
-                  key={index}
-                  className="bg-white shadow-lg rounded-lg overflow-hidden p-4 flex items-center justify-between"
+                  key={item.id}
+                  className="bg-white p-4 rounded-lg flex items-center justify-between shadow-lg"
                 >
-                  <div className="flex items-center gap-4">
+                  <div className="flex gap-4">
                     <img
                       src={item.image}
                       alt={item.name}
-                      className="w-20 h-20 object-cover rounded-md"
+                      className="w-20 h-20 object-cover rounded-lg"
                     />
                     <div>
                       <h2 className="text-text text-lg font-bold">
                         {item.name}
                       </h2>
-                      <p className="text-primary text-md">₦{item.price}</p>
+                      <p className="text-primary">₦{item.price}</p>
+                      <p className="text-sm">Quantity: {item.quantity}</p>
                     </div>
                   </div>
 
@@ -50,12 +51,12 @@ const Cart = () => {
 
             <div className="mt-10 text-center">
               <p className="text-primary text-2xl mb-6">
-                Total: ₦{totalPrice}
+                Total: ₦{getTotalPrice()}
               </p>
 
               <OrderButton
                 productName={cart.map((item) => item.name).join(", ")}
-                price={totalPrice}
+                price={getTotalPrice()}
                 phone="+2348104618586"
                 email="jesulobadaniel1@gmail.com"
               />
