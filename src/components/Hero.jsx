@@ -1,5 +1,7 @@
 import { motion } from "framer-motion";
 import Button from "./Button";
+import { Link } from "react-router-dom";
+import { text } from "framer-motion/client";
 
 const Hero = () => {
   return (
@@ -23,13 +25,16 @@ const Hero = () => {
       </motion.p>
 
       <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ delay: 1.5, duration: 1 }}
-        className="mt-8"
-      >
-        <Button text="Shop Now" />
-      </motion.div>
+  initial={{ opacity: 0, y: 30 }}
+  animate={{ opacity: 1, y: 0 }}
+  transition={{ delay: 1.5, duration: 1 }}
+  className="mt-8"
+>
+  <Link to="/product">
+    <Button text="Shop Now" />
+  </Link>
+</motion.div>
+
     </section>
   );
 };
