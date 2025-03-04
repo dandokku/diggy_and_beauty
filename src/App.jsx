@@ -9,47 +9,43 @@ import ProductPage from "./pages/ProductPage";
 import ProductDetails from "./pages/ProductDetails";
 import ContactPage from "./pages/ContactPage";
 
-
+import { CartProvider } from "./context/CartContext";
 import { useState, useEffect } from "react";
 import { animateScroll } from "react-scroll";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const [showCart, setShowCart] = useState(false);
+
   useEffect(() => {
     animateScroll.scrollToTop({ duration: 1000, smooth: "easeInOutQuad" });
   }, []);
 
-  const [cart, setCart] = useState([]);
-  const [showCart, setShowCart] = useState(false);
-
-  const handleRemoveFromCart = (index) => {
-    const newCart = cart.filter((_, i) => i !== index);
-    setCart(newCart);
-  };
-
   return (
-    <Router>
-      {/* Navbar */}
-      <Navbar
-        cart={cart}
-        cartCount={cart.length}
-        onCartClick={() => setShowCart(!showCart)}
-      />
+    <CartProvider>
+      <Router>
+        <Navbar onCartClick={() => setShowCart(!showCart)} />
+        {showCart && <Cart onClose={() => setShowCart(false)} />}
+        <ScrollToTop />
 
-      {/* Cart Sidebar */}
-      {showCart && <Cart cart={cart} onRemove={handleRemoveFromCart} />}
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/product" element={<ProductPage />} />
+          <Route path="/product/:id" element={<ProductDetails />} />
+          <Route path="/contact" element={<ContactPage />} />
+          <Route path="/cart" element={<Cart />} />
+        </Routes>
 
-      <Routes>
-        <Route path="/" element={<Home cart={cart} setCart={setCart} />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/product" element={<ProductPage />} />
-        <Route path="/product/:id" element={<ProductDetails />} />
-        <Route path="/contact" element={<ContactPage />} />
-      </Routes>
-
-      <Footer />
-      <ScrollToTop />
-    </Router>
+        <Footer />
+        
+        <ToastContainer />
+      </Router>
+    </CartProvider>
   );
 }
 
 export default App;
+
+
