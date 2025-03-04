@@ -13,7 +13,7 @@ const ProductCard = ({ product }) => {
   return (
     <div className="relative group cursor-pointer overflow-hidden rounded-lg shadow-lg bg-white hover:shadow-xl transition-transform duration-300 hover:scale-105">
       {/* Product Image */}
-      <div className="relative w-full h-72">
+      <div className="relative w-full h-48 md:h-72">
         <img
           src={product.image}
           alt={product.name}

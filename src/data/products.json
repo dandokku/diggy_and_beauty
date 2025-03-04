@@ -4,139 +4,150 @@
     "name": "Luxury Bone Straight Wig",
     "description": "100% human hair, silky texture with natural shine.",
     "price": "85,000",
-    "image": "https://i.pinimg.com/736x/4b/f3/f5/4bf3f501c8232c2c705d6573b88b40a8.jpg"
+    "image": "https://i.pinimg.com/736x/4b/f3/f5/4bf3f501c8232c2c705d6573b88b40a8.jpg",
+    "category": "Wig"
   },
   {
     "id": 2,
     "name": "HD Closure Wig",
     "description": "Invisible lace for a flawless hairline.",
     "price": "75,000",
-    "image": "https://i.pinimg.com/474x/ff/3a/3f/ff3a3fdc59ae645f5673a11e47dad7cc.jpg"
+    "image": "https://i.pinimg.com/474x/ff/3a/3f/ff3a3fdc59ae645f5673a11e47dad7cc.jpg",
+    "category": "Wig"
   },
-  {
-    "id": 3,
-    "name": "Glow Up Body Oil",
-    "description": "Non-greasy luxury oil for glowing skin.",
-    "price": "12,000",
-    "image": "https://i.pinimg.com/474x/76/fd/8d/76fd8dd0991563c279f038e91cf22c1a.jpg"
-  },
-  {
-    "id": 4,
-    "name": "Silk Hair Bonnet",
-    "description": "Protects hair from breakage overnight.",
-    "price": "5,000",
-    "image": "https://i.pinimg.com/236x/05/cb/5c/05cb5c77f868d67a4f7c39f7f3a60073.jpg"
-  },
-  {
-    "id": 5,
-    "name": "24K Gold Lip Gloss",
-    "description": "Hydrating lip gloss with real gold shimmer.",
-    "price": "4,500",
-    "image": "https://i.pinimg.com/236x/05/5c/8e/055c8e1a9b5532a63039e2195fa35ff7.jpg"
-  },
-  {
-    "id": 6,
-    "name": "Luxury Mink Lashes",
-    "description": "Reusable, soft, and natural-looking lashes.",
-    "price": "3,500",
-    "image": "https://i.pinimg.com/236x/ef/30/27/ef3027358a96924a8255bcb7df717881.jpg"
-  },
-  {
-    "id": 7,
-    "name": "Brow Growth Serum",
-    "description": "Boosts natural brow growth in 4 weeks.",
-    "price": "7,000",
-    "image": "https://i.pinimg.com/736x/8e/57/0c/8e570c2fc15c39b89ee0aab77b9007a2.jpg"
-  },
-  {
-    "id": 8,
-    "name": "Edge Control Gel",
-    "description": "Long-lasting hold without flaking.",
-    "price": "3,000",
-    "image": "https://i.pinimg.com/236x/f4/6f/49/f46f4948f8f974be9c0b05e07466e527.jpg"
-  },
-  {
-    "id": 9,
-    "name": "Rose Water Facial Toner",
-    "description": "Hydrating & refreshing facial toner.",
-    "price": "6,000",
-    "image": "https://i.pinimg.com/474x/7f/5d/e4/7f5de4335897fb4a28c41bfc435159bd.jpg"
-  },
-  {
-    "id": 10,
-    "name": "Honey Glow Body Scrub",
-    "description": "Exfoliates dead skin cells for a radiant glow.",
-    "price": "10,000",
-    "image": "https://i.pinimg.com/474x/2c/80/75/2c8075623b2f9ff83877bfebd4afbaed.jpg"
-  },
-  {
-    "id": 11,
-    "name": "Luxury Press On Nails",
-    "description": "Reusable, salon-quality nails in different styles.",
-    "price": "6,500",
-    "image": "https://i.pinimg.com/474x/69/8f/21/698f217511967a6068dd58bfa7012adb.jpg"
-  },
-  {
-    "id": 12,
-    "name": "Shea Butter Lip Balm",
-    "description": "Moisturizes dry, cracked lips.",
-    "price": "2,500",
-    "image": "https://i.pinimg.com/236x/61/ba/a7/61baa74f25820c29ebf66a428e70e76c.jpg"
-  },
-  {
-    "id": 13,
-    "name": "Hair Growth Oil",
-    "description": "Fast hair growth and thickness guaranteed.",
-    "price": "8,000",
-    "image": "https://i.pinimg.com/236x/b8/de/59/b8de596a0f922d2b3a20bac51772ed3a.jpg"
-  },
-  {
-    "id": 14,
-    "name": "Luxury Edge Brush",
-    "description": "For precise baby hair styling.",
-    "price": "2,000",
-    "image": "https://i.pinimg.com/236x/e1/ec/6f/e1ec6fec2ed1604499510e4a46580fec.jpg"
-  },
-  {
-    "id": 15,
-    "name": "Coconut Glow Body Butter",
-    "description": "Deep moisturizing with a tropical scent.",
-    "price": "9,500",
-    "image": "https://i.pinimg.com/236x/04/51/ca/0451ca907bfd0a1755f9a6c8683ba4d9.jpg"
-  },
-  {
-    "id": 16,
-    "name": "Nude Matte Lipstick",
-    "description": "Long-lasting velvet matte finish.",
-    "price": "4,800",
-    "image": "https://i.pinimg.com/236x/d3/45/e2/d345e2975e607b6dd3b763733fa58bfa.jpg"
-  },
-  {
-    "id": 17,
-    "name": "Microfiber Hair Towel",
-    "description": "Dries hair faster without frizz.",
-    "price": "3,500",
-    "image": "https://i.pinimg.com/236x/51/93/06/519306793f2b9d33b49152c4cc1d10ab.jpg"
-  },
-  {
-    "id": 18,
-    "name": "Luxury Satin Scrunchies",
-    "description": "Prevents hair breakage and adds style.",
-    "price": "2,500",
-    "image": "https://i.pinimg.com/236x/8c/68/e3/8c68e3c1b0ceb04dcf43b3b33718d497.jpg"
-  },
-  {
-    "id": 19,
-    "name": "Blossom Body Mist",
-    "description": "Fresh floral fragrance for everyday use.",
-    "price": "6,000",
-    "image": "https://i.pinimg.com/474x/e7/64/cd/e764cdee464667fa95d66ef601c359b2.jpg"
-  },
-  {
-    "id": 20,
-    "name": "Glass Skin Facial Serum",
-    "description": "Gives your face that natural glassy glow.",
-    "price": "11,000",
-    "image": "https://i.pinimg.com/236x/57/dd/e8/57dde8c2306fc28b05f40b0eb5d6d9c7.jpg"
-  }
+    {
+      "id": 3,
+      "name": "Glow Up Body Oil",
+      "description": "Non-greasy luxury oil for glowing skin.",
+      "price": "12,000",
+      "image": "https://i.pinimg.com/474x/76/fd/8d/76fd8dd0991563c279f038e91cf22c1a.jpg"
+    },
+    {
+      "id": 4,
+      "name": "Silk Hair Bonnet",
+      "description": "Protects hair from breakage overnight.",
+      "price": "5,000",
+      "image": "https://i.pinimg.com/236x/05/cb/5c/05cb5c77f868d67a4f7c39f7f3a60073.jpg"
+    },
+    {
+      "id": 5,
+      "name": "24K Gold Lip Gloss",
+      "description": "Hydrating lip gloss with real gold shimmer.",
+      "price": "4,500",
+      "image": "https://i.pinimg.com/236x/05/5c/8e/055c8e1a9b5532a63039e2195fa35ff7.jpg"
+    },
+    {
+      "id": 6,
+      "name": "Luxury Mink Lashes",
+      "description": "Reusable, soft, and natural-looking lashes.",
+      "price": "3,500",
+      "image": "https://i.pinimg.com/236x/ef/30/27/ef3027358a96924a8255bcb7df717881.jpg"
+    },
+    {
+      "id": 7,
+      "name": "Brow Growth Serum",
+      "description": "Boosts natural brow growth in 4 weeks.",
+      "price": "7,000",
+      "image": "https://i.pinimg.com/736x/8e/57/0c/8e570c2fc15c39b89ee0aab77b9007a2.jpg"
+    },
+    {
+      "id": 8,
+      "name": "Edge Control Gel",
+      "description": "Long-lasting hold without flaking.",
+      "price": "3,000",
+      "image": "https://i.pinimg.com/236x/f4/6f/49/f46f4948f8f974be9c0b05e07466e527.jpg"
+    },
+    {
+      "id": 9,
+      "name": "Rose Water Facial Toner",
+      "description": "Hydrating & refreshing facial toner.",
+      "price": "6,000",
+      "image": "https://i.pinimg.com/474x/7f/5d/e4/7f5de4335897fb4a28c41bfc435159bd.jpg"
+    },
+    {
+      "id": 10,
+      "name": "Honey Glow Body Scrub",
+      "description": "Exfoliates dead skin cells for a radiant glow.",
+      "price": "10,000",
+      "image": "https://i.pinimg.com/474x/2c/80/75/2c8075623b2f9ff83877bfebd4afbaed.jpg"
+    },
+    {
+      "id": 11,
+      "name": "Luxury Press On Nails",
+      "description": "Reusable, salon-quality nails in different styles.",
+      "price": "6,500",
+      "image": "https://i.pinimg.com/474x/69/8f/21/698f217511967a6068dd58bfa7012adb.jpg"
+    },
+    {
+      "id": 12,
+      "name": "Shea Butter Lip Balm",
+      "description": "Moisturizes dry, cracked lips.",
+      "price": "2,500",
+      "image": "https://i.pinimg.com/236x/61/ba/a7/61baa74f25820c29ebf66a428e70e76c.jpg"
+    },
+    {
+      "id": 13,
+      "name": "Hair Growth Oil",
+      "description": "Fast hair growth and thickness guaranteed.",
+      "price": "8,000",
+      "image": "https://i.pinimg.com/236x/b8/de/59/b8de596a0f922d2b3a20bac51772ed3a.jpg"
+    },
+    {
+      "id": 14,
+      "name": "Luxury Edge Brush",
+      "description": "For precise baby hair styling.",
+      "price": "2,000",
+      "image": "https://i.pinimg.com/236x/e1/ec/6f/e1ec6fec2ed1604499510e4a46580fec.jpg"
+    },
+    {
+      "id": 15,
+      "name": "Coconut Glow Body Butter",
+      "description": "Deep moisturizing with a tropical scent.",
+      "price": "9,500",
+      "image": "https://i.pinimg.com/236x/04/51/ca/0451ca907bfd0a1755f9a6c8683ba4d9.jpg"
+    },
+    {
+      "id": 16,
+      "name": "Nude Matte Lipstick",
+      "description": "Long-lasting velvet matte finish.",
+      "price": "4,800",
+      "image": "https://i.pinimg.com/236x/d3/45/e2/d345e2975e607b6dd3b763733fa58bfa.jpg"
+    },
+    {
+      "id": 17,
+      "name": "Microfiber Hair Towel",
+      "description": "Dries hair faster without frizz.",
+      "price": "3,500",
+      "image": "https://i.pinimg.com/236x/51/93/06/519306793f2b9d33b49152c4cc1d10ab.jpg"
+    },
+    {
+      "id": 18,
+      "name": "Luxury Satin Scrunchies",
+      "description": "Prevents hair breakage and adds style.",
+      "price": "2,500",
+      "image": "https://i.pinimg.com/236x/8c/68/e3/8c68e3c1b0ceb04dcf43b3b33718d497.jpg"
+    },
+    {
+      "id": 19,
+      "name": "Blossom Body Mist",
+      "description": "Fresh floral fragrance for everyday use.",
+      "price": "6,000",
+      "image": "https://i.pinimg.com/474x/e7/64/cd/e764cdee464667fa95d66ef601c359b2.jpg"
+    },
+    {
+      "id": 20,
+      "name": "Glass Skin Facial Serum",
+      "description": "Gives your face that natural glassy glow.",
+      "price": "11,000",
+      "image": "https://i.pinimg.com/236x/57/dd/e8/57dde8c2306fc28b05f40b0eb5d6d9c7.jpg"
+    },
+    {
+      "id": 21,
+      "name": "Luxury Bone Straight Wig",
+      "description": "100% human hair, silky texture with natural shine.",
+      "price": "85,000",
+      "image": "https://i.pinimg.com/736x/4b/f3/f5/4bf3f501c8232c2c705d6573b88b40a8.jpg",
+      "category": "Wig"
+    }
+  
 ]

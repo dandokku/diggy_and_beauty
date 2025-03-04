@@ -22,9 +22,14 @@ const ProductPage = () => {
     }),
   };
 
-  // 🔍 Filtered Products
+  // Filtering Products Based on Query
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
+  );
+
+  const wigs = filteredProducts.filter((product) => product.category === "Wig");
+  const accessories = filteredProducts.filter(
+    (product) => product.category !== "Wig"
   );
 
   return (
@@ -35,7 +40,7 @@ const ProductPage = () => {
             Our Products
           </h1>
 
-          {/* Search Button */}
+          {/* Search Button 🔍 */}
           <button
             onClick={() => setShowSearch(true)}
             className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
@@ -55,26 +60,60 @@ const ProductPage = () => {
           setQuery={setQuery}
         />
 
-        <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
-          {filteredProducts.length > 0 ? (
-            filteredProducts.map((product, index) => (
-              <motion.div
-                key={product.id}
-                className="break-inside-avoid"
-                variants={cardAnimation}
-                initial="hidden"
-                whileInView="visible"
-                custom={index}
-                viewport={{ once: true }}
-              >
-                <ProductCard product={product} />
-              </motion.div>
-            ))
-          ) : (
-            <p className="text-center text-white text-lg col-span-full">
-              No Products Found 😢
-            </p>
-          )}
+        {/* Wigs Section 🦱 */}
+        <div className="mb-16">
+          <h2 className="text-3xl font-bold text-primary glitter-text mb-6 text-center">
+            Wigs Collection
+          </h2>
+          <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+            {wigs.length > 0 ? (
+              wigs.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  className="break-inside-avoid"
+                  variants={cardAnimation}
+                  initial="hidden"
+                  whileInView="visible"
+                  custom={index}
+                  viewport={{ once: true }}
+                >
+                  <ProductCard product={product} />
+                </motion.div>
+              ))
+            ) : (
+              <p className="text-center text-white text-lg">
+                No Wigs Found 😢
+              </p>
+            )}
+          </div>
+        </div>
+
+        {/* Accessories Section 💄 */}
+        <div>
+          <h2 className="text-3xl font-bold text-primary glitter-text mb-6 text-center">
+            Accessories & Others
+          </h2>
+          <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
+            {accessories.length > 0 ? (
+              accessories.map((product, index) => (
+                <motion.div
+                  key={product.id}
+                  className="break-inside-avoid"
+                  variants={cardAnimation}
+                  initial="hidden"
+                  whileInView="visible"
+                  custom={index}
+                  viewport={{ once: true }}
+                >
+                  <ProductCard product={product} />
+                </motion.div>
+              ))
+            ) : (
+              <p className="text-center text-white text-lg">
+                No Accessories Found 😢
+              </p>
+            )}
+          </div>
         </div>
       </div>
     </div>
