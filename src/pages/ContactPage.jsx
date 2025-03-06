@@ -36,7 +36,7 @@ const ContactPage = () => {
 
         {/* Map */}
         <div className="mt-16">
-          <Map />
+          {/* <Map /> */}
         </div>
       </div>
     </section>

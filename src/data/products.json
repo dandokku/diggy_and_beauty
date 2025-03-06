@@ -31,7 +31,7 @@
     "description": "Luxurious silk bonnet that protects hair from breakage, reduces frizz, and maintains moisture overnight. Perfect for natural hair, wigs, and braids.",
     "price": "5,000",
     "image": "https://i.pinimg.com/236x/05/cb/5c/05cb5c77f868d67a4f7c39f7f3a60073.jpg",
-    "rating": 4.2
+    "rating": 4.5
   },
   {
     "id": 5,
@@ -39,7 +39,7 @@
     "description": "Hydrating lip gloss infused with real gold shimmer particles. Non-sticky, high-shine finish that keeps your lips moisturized all day. Perfect for a luxury makeup look.",
     "price": "4,500",
     "image": "https://i.pinimg.com/236x/05/5c/8e/055c8e1a9b5532a63039e2195fa35ff7.jpg",
-    "rating": 4.8
+    "rating": 3
   },
   {
     "id": 6,
@@ -47,7 +47,7 @@
     "description": "100% reusable mink lashes with soft, lightweight fibers that give a natural yet glamorous look. Easy to apply and perfect for any makeup style.",
     "price": "3,500",
     "image": "https://i.pinimg.com/236x/ef/30/27/ef3027358a96924a8255bcb7df717881.jpg",
-    "rating": 4.6
+    "rating": 3.5
   },
   {
     "id": 7,
@@ -55,7 +55,7 @@
     "description": "Nourishing brow serum enriched with castor oil and biotin. Promotes thicker, fuller brows in just 4 weeks. Suitable for all skin types.",
     "price": "7,000",
     "image": "https://i.pinimg.com/736x/8e/57/0c/8e570c2fc15c39b89ee0aab77b9007a2.jpg",
-    "rating": 4.4
+    "rating": 4.5
   },
   {
     "id": 8,
@@ -63,7 +63,7 @@
     "description": "Long-lasting edge control gel with a non-flaking formula. Provides 24-hour hold while moisturizing hair edges and promoting hair growth.",
     "price": "3,000",
     "image": "https://i.pinimg.com/236x/f4/6f/49/f46f4948f8f974be9c0b05e07466e527.jpg",
-    "rating": 4.1
+    "rating": 5
   },
   {
     "id": 9,
@@ -71,7 +71,7 @@
     "description": "Refreshing facial toner made with pure rose water. Hydrates, balances pH levels, and soothes skin while minimizing pores.",
     "price": "6,000",
     "image": "https://i.pinimg.com/474x/7f/5d/e4/7f5de4335897fb4a28c41bfc435159bd.jpg",
-    "rating": 4.9
+    "rating": 3.5
   },
   {
     "id": 10,
@@ -79,7 +79,7 @@
     "description": "Exfoliating body scrub made with honey, sugar, and essential oils. Removes dead skin cells, leaving your skin soft, smooth, and glowing.",
     "price": "10,000",
     "image": "https://i.pinimg.com/474x/2c/80/75/2c8075623b2f9ff83877bfebd4afbaed.jpg",
-    "rating": 4.6
+    "rating": 4
   },
   {
     "id": 11,
@@ -87,7 +87,7 @@
     "description": "Salon-quality reusable press-on nails in various designs. Easy to apply and long-lasting. Perfect for quick glam without the hassle.",
     "image": "https://i.pinimg.com/474x/69/8f/21/698f217511967a6068dd58bfa7012adb.jpg",
     "price": "15,000",
-    "rating": 4.3
+    "rating": 3
   },
   {
     "id": 12,
@@ -95,7 +95,7 @@
     "description": "Moisturizing lip balm made with natural shea butter. Heals dry, cracked lips while leaving them soft and nourished.",
     "price": "2,500",
     "image": "https://i.pinimg.com/236x/61/ba/a7/61baa74f25820c29ebf66a428e70e76c.jpg",
-    "rating": 4.7
+    "rating": 5
   },
   {
     "id": 13,
@@ -103,7 +103,7 @@
     "description": "100% natural oil blend that stimulates hair growth, prevents hair loss, and thickens hair. Made with castor oil, rosemary, and essential vitamins.",
     "price": "8,000",
     "image": "https://i.pinimg.com/236x/b8/de/59/b8de596a0f922d2b3a20bac51772ed3a.jpg",
-    "rating": 4.8
+    "rating": 4.5
   },
   {
     "id": 14,
@@ -111,7 +111,7 @@
     "description": "Double-sided brush and comb designed for perfect baby hair styling. Gentle on hair and easy to use.",
     "price": "2,000",
     "image": "https://i.pinimg.com/236x/e1/ec/6f/e1ec6fec2ed1604499510e4a46580fec.jpg",
-    "rating": 4.2
+    "rating": 4
   },
   {
     "id": 15,
@@ -119,7 +119,7 @@
     "description": "Rich body butter infused with coconut oil and shea butter. Deeply moisturizes and leaves skin with a radiant glow and tropical scent.",
     "price": "9,500",
     "image": "https://i.pinimg.com/236x/04/51/ca/0451ca907bfd0a1755f9a6c8683ba4d9.jpg",
-    "rating": 4.9
+    "rating": 5
   },
     {
       "id": 16,
@@ -127,7 +127,7 @@
       "description": "Long-lasting velvet matte finish.",
       "price": "4,800",
       "image": "https://i.pinimg.com/236x/d3/45/e2/d345e2975e607b6dd3b763733fa58bfa.jpg",
-      "rating": 4.8
+      "rating": 5
     },
     {
       "id": 17,
@@ -135,7 +135,7 @@
       "description": "Dries hair faster without frizz.",
       "price": "3,500",
       "image": "https://i.pinimg.com/236x/51/93/06/519306793f2b9d33b49152c4cc1d10ab.jpg",
-      "rating": 4.8
+      "rating": 2.5
     },
     {
       "id": 18,
@@ -143,7 +143,7 @@
       "description": "Prevents hair breakage and adds style.",
       "price": "2,500",
       "image": "https://i.pinimg.com/236x/8c/68/e3/8c68e3c1b0ceb04dcf43b3b33718d497.jpg",
-      "rating": 4.8
+      "rating": 3
     },
     {
       "id": 19,
@@ -151,7 +151,7 @@
       "description": "Fresh floral fragrance for everyday use.",
       "price": "6,000",
       "image": "https://i.pinimg.com/474x/e7/64/cd/e764cdee464667fa95d66ef601c359b2.jpg",
-      "rating": 4.8
+      "rating": 5
     },
     {
       "id": 20,
@@ -159,6 +159,6 @@
       "description": "Gives your face that natural glassy glow.",
       "price": "11,000",
       "image": "https://i.pinimg.com/236x/57/dd/e8/57dde8c2306fc28b05f40b0eb5d6d9c7.jpg",
-      "rating": 4.8
+      "rating": 5
     }
 ]
