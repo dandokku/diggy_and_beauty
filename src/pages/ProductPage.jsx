@@ -1,13 +1,27 @@
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import products from "../data/products.json";
 import ProductCard from "../components/ProductCard";
 import { FiSearch } from "react-icons/fi";
-import SearchOverlay from "../components/SearchOverlay";
 
 const ProductPage = () => {
   const [showSearch, setShowSearch] = useState(false);
   const [query, setQuery] = useState("");
+  const searchRef = useRef(null);
+
+  // Close Search when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (searchRef.current && !searchRef.current.contains(e.target)) {
+        setShowSearch(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   const cardAnimation = {
     hidden: { opacity: 0, y: 50 },
@@ -35,30 +49,53 @@ const ProductPage = () => {
   return (
     <div className="bg-lightbg min-h-screen pt-24 mt-16">
       <div className="container mx-auto p-6 sm:p-10">
-        <div className="flex justify-between items-center mb-10">
+        <div className="flex justify-between items-center mb-10 relative">
           <h1 className="text-4xl font-bold text-center text-primary glitter-text">
             Our Products
           </h1>
 
-          {/* Search Button 🔍 */}
-          <button
-            onClick={() => setShowSearch(true)}
-            className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
-          >
-            <FiSearch size={24} className="text-bg" />
-          </button>
-        </div>
+          {/* Search Feature 🔍 */}
+          <div className="flex items-center gap-3" ref={searchRef}>
+            <motion.div
+              initial={{ width: 0, opacity: 0 }}
+              animate={{
+                width: showSearch ? "200px" : "0px",
+                opacity: showSearch ? 1 : 0,
+              }}
+              transition={{ duration: 0.4, ease: "easeInOut" }}
+              className="overflow-hidden bg-white rounded-full shadow-lg hidden md:block"
+            >
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-full px-4 py-2 text-bg outline-none"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </motion.div>
 
-        {/* Search Overlay */}
-        <SearchOverlay
-          show={showSearch}
-          onClose={() => {
-            setShowSearch(false);
-            setQuery("");
-          }}
-          products={products}
-          setQuery={setQuery}
-        />
+            {/* Search Button */}
+            <button
+              onClick={() => setShowSearch(!showSearch)}
+              className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
+            >
+              <FiSearch size={24} className="text-bg" />
+            </button>
+          </div>
+
+          {/* Mobile Search Input */}
+          {showSearch && (
+            <div className="w-full block md:hidden mt-6">
+              <input
+                type="text"
+                placeholder="Search..."
+                className="w-full px-4 py-3 rounded-lg bg-white text-bg outline-none shadow-lg"
+                value={query}
+                onChange={(e) => setQuery(e.target.value)}
+              />
+            </div>
+          )}
+        </div>
 
         {/* Wigs Section 🦱 */}
         <div className="mb-16">
