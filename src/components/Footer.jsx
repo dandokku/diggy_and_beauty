@@ -18,7 +18,7 @@ const Footer = () => {
         <div>
           <h3 className="text-primary text-xl font-bold uppercase mb-4">Quick Links</h3>
           <ul className="space-y-3">
-  {["Home", "Shop", "About", "Contact"].map((link, index) => (
+  {["Home", "Products", "About", "Contact"].map((link, index) => (
     <li key={index} className="hover:text-primary cursor-pointer transition duration-300">
       <ScrollLink
         to={link.toLowerCase()}

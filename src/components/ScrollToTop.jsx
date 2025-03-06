@@ -1,42 +1,14 @@
-import { useEffect, useState } from "react";
-import { FaArrowUp } from "react-icons/fa";
-import { motion } from "framer-motion";
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
 
 const ScrollToTop = () => {
-  const [visible, setVisible] = useState(false);
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    const toggleVisibility = () => {
-      window.scrollY > 300 ? setVisible(true) : setVisible(false);
-    };
+    window.scrollTo({ top: 0, behavior: "smooth" }); // Smooth scroll effect
+  }, [pathname]);
 
-    window.addEventListener("scroll", toggleVisibility);
-    return () => window.removeEventListener("scroll", toggleVisibility);
-  }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
-  return (
-    <motion.div
-      className={`fixed bottom-10 right-10 z-50 ${
-        visible ? "block" : "hidden"
-      }`}
-      whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={visible ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0 }}
-      transition={{ duration: 0.5, ease: "easeInOut" }}
-      onClick={scrollToTop}
-    >
-      <button className="bg-bg text-[#d7a31a] p-4 rounded-full shadow-lg cursor-pointer hover:bg-accent transition-all">
-        <FaArrowUp className="text-2xl animate-pulse" />
-      </button>
-    </motion.div>
-  );
+  return null; // This component doesn't render anything
 };
 
 export default ScrollToTop;

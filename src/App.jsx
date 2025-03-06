@@ -3,6 +3,7 @@ import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
 import Cart from "./components/Cart";
 import ScrollToTop from "./components/ScrollToTop";
+import ScrollToTopButton from "./components/ScrollToTopButton";
 import Home from "./pages/Home";
 import About from "./pages/AboutPage";
 import ProductPage from "./pages/ProductPage";
@@ -25,14 +26,15 @@ function App() {
   return (
     <CartProvider>
       <Router>
+        <ScrollToTop />
         <Navbar onCartClick={() => setShowCart(!showCart)} />
         {showCart && <Cart onClose={() => setShowCart(false)} />}
-        <ScrollToTop />
+        <ScrollToTopButton />
 
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/product" element={<ProductPage />} />
+          <Route path="/products" element={<ProductPage />} />
           <Route path="/product/:id" element={<ProductDetails />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/cart" element={<Cart />} />

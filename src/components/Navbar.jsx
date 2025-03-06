@@ -66,14 +66,14 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-primary text-2xl font-bold uppercase tracking-widest glitter-text"
+            className="text-primary text-md md:text-2xl font-bold uppercase tracking-widest glitter-text"
           >
             <Link to="/">Diggy & Beauty</Link>
           </motion.div>
 
           {/* Desktop Menu */}
           <ul className="hidden md:flex gap-8 text-white">
-            {["Home", "Product", "About", "Contact"].map((link, index) => (
+            {["Home", "Products", "About", "Contact"].map((link, index) => (
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.1 }}
@@ -89,13 +89,7 @@ const Navbar = () => {
           {/* Icons */}
           <div className="flex items-center gap-6">
             {/* Search Icon */}
-            <motion.div
-              whileHover={{ scale: 1.2, rotate: [0, -5, 5, 0] }}
-              className="cursor-pointer text-white hover:text-primary transition"
-              onClick={() => setShowSearch(true)}
-            >
-              <FiSearch size={24} />
-            </motion.div>
+           
 
             {/* Cart Icon */}
             <Link to="/cart">
@@ -118,13 +112,13 @@ const Navbar = () => {
                 <FiX
                   size={30}
                   onClick={toggleMenu}
-                  className="cursor-pointer"
+                  className="cursor-pointer text-white"
                 />
               ) : (
                 <FiMenu
                   size={30}
                   onClick={toggleMenu}
-                  className="cursor-pointer"
+                  className="cursor-pointer text-white"
                 />
               )}
             </div>
@@ -141,7 +135,7 @@ const Navbar = () => {
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
       >
-        {["Home", "Product", "About", "Contact"].map((link, index) => (
+        {["Home", "Products", "About", "Contact"].map((link, index) => (
           <motion.li
             key={index}
             whileHover={{ scale: 1.1 }}
