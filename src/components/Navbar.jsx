@@ -66,7 +66,7 @@ const Navbar = () => {
             initial={{ opacity: 0, y: -30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-            className="text-primary text-md md:text-2xl font-bold uppercase tracking-widest glitter-text"
+            className="text-[#d7a31a] text-md md:text-2xl font-bold uppercase tracking-widest glitter-text"
           >
             <Link to="/">Diggy & Beauty</Link>
           </motion.div>
@@ -77,7 +77,7 @@ const Navbar = () => {
               <motion.li
                 key={index}
                 whileHover={{ scale: 1.1 }}
-                className="cursor-pointer uppercase tracking-wide hover:text-primary transition"
+                className="cursor-pointer uppercase tracking-wide hover:text-[#d7a31a] transition"
               >
                 <Link to={link === "Home" ? "/" : `/${link.toLowerCase()}`}>
                   {link}
@@ -95,11 +95,11 @@ const Navbar = () => {
             <Link to="/cart">
               <motion.div
                 whileHover={{ scale: 1.2, rotate: [0, 10, -10, 0] }}
-                className="relative cursor-pointer text-white hover:text-primary transition"
+                className="relative cursor-pointer text-white hover:text-[#d7a31a] transition"
               >
                 <FiShoppingCart size={24} />
                 {cart.length > 0 && (
-                  <span className="absolute top-0 right-0 bg-primary text-bg text-xs w-5 h-5 rounded-full flex items-center justify-center">
+                  <span className="absolute top-0 right-0 bg-[#d7a31a] text-[#1a1a1a] text-xs w-5 h-5 rounded-full flex items-center justify-center">
                     {cart.length}
                   </span>
                 )}

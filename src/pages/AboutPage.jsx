@@ -3,7 +3,7 @@ import AboutCard from "../components/AboutCard";
 
 const AboutPage = () => {
   return (
-    <section id="about" className="bg-lightbg mt-16 py-20 text-text">
+    <section id="about" className="bg-lightbg mt-16 py-20 text-[#212121]">
       <div className="container mx-auto px-6">
         {/* Title */}
         <motion.h2
@@ -39,7 +39,7 @@ const AboutPage = () => {
 
         {/* Why Choose Us Section */}
         <div className="mt-16 text-center text-whitetext">
-          <h3 className="text-3xl text-primary mb-8 uppercase font-bold">Why Choose Us?</h3>
+          <h3 className="text-3xl text-[#d7a31a] mb-8 uppercase font-bold">Why Choose Us?</h3>
           <p className="max-w-2xl mx-auto text-lg leading-loose">
             At Diggy & Beauty, we combine high-quality products, personalized services, and excellent customer care to give you an experience like no other.
           </p>

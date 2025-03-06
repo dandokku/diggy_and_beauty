@@ -35,7 +35,7 @@ const ProductDetails = () => {
           {/* Contact Us Button */}
           <button
             onClick={toggleSidebar}
-            className="bg-primary cursor-pointer text-white py-3 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-accent transition duration-300"
+            className="bg-[#d7a31a] cursor-pointer text-white py-3 mb-8 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-accent transition duration-300"
           >
             Contact Us
           </button>
@@ -72,7 +72,7 @@ const ProductDetails = () => {
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsSidebarOpen(false)}
-            className="flex items-center gap-3 bg-accent text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-primary transition duration-300"
+            className="flex items-center gap-3 bg-accent text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-[#d7a31a] transition duration-300"
           >
             <FaWhatsapp className="text-2xl" />
             WhatsApp
@@ -81,7 +81,7 @@ const ProductDetails = () => {
           <a
             href={`mailto:jesulobadaniel1@gmail.com?subject=Enquiry about ${product.name}`}
             onClick={() => setIsSidebarOpen(false)}
-            className="flex items-center gap-3 bg-primary text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-accent transition duration-300"
+            className="flex items-center gap-3 bg-[#d7a31a] text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-accent transition duration-300"
           >
             <FaEnvelope className="text-2xl" />
             Email

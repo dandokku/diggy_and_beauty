@@ -19,7 +19,7 @@ const OrderButton = ({ productName, price, phone, email }) => {
         href={`https://wa.me/${phone}?text=${encodeURIComponent(whatsappMessage)}`}
         target="_blank"
         rel="noopener noreferrer"
-        className="bg-primary text-white px-6 py-3 rounded-md flex items-center gap-2 hover:bg-accent transition"
+        className="bg-[#d7a31a] text-white px-6 py-3 rounded-md flex items-center gap-2 hover:bg-[#bd8cbf] transition"
         onClick={() => handleOrder("WhatsApp")}
       >
         <FiMessageCircle /> Order via WhatsApp
@@ -27,7 +27,7 @@ const OrderButton = ({ productName, price, phone, email }) => {
 
       <a
         href={`mailto:${email}?subject=${emailSubject}`}
-        className="bg-white text-bg px-6 py-3 rounded-md flex items-center gap-2 hover:bg-primary transition"
+        className="bg-white text-[#1a1a1a] px-6 py-3 rounded-md flex items-center gap-2 hover:bg-[#d7a31a] transition"
         onClick={() => handleOrder("Email")}
       >
         <FiMail /> Order via Email

@@ -28,7 +28,7 @@ const SearchOverlay = ({ show, onClose, products, setQuery }) => {
           >
             {/* Close Button */}
             <FiX
-              className="text-white text-3xl cursor-pointer hover:text-primary absolute top-6 right-6"
+              className="text-white text-3xl cursor-pointer hover:text-[#d7a31a] absolute top-6 right-6"
               onClick={() => {
                 setInput("");
                 setQuery("");
@@ -36,7 +36,7 @@ const SearchOverlay = ({ show, onClose, products, setQuery }) => {
               }}
             />
 
-            <h2 className="text-3xl font-bold glitter-text text-primary mb-6">
+            <h2 className="text-3xl font-bold glitter-text text-[#d7a31a] mb-6">
               What are you looking for? 🔍
             </h2>
 
@@ -49,7 +49,7 @@ const SearchOverlay = ({ show, onClose, products, setQuery }) => {
               initial={{ width: "0%" }}
               animate={{ width: "100%" }}
               transition={{ duration: 0.8, ease: "easeInOut" }}
-              className="p-4 text-lg bg-lightbg text-white outline-none rounded-lg shadow-lg w-full focus:ring-2 focus:ring-primary"
+              className="p-4 text-lg bg-lightbg text-white outline-none rounded-lg shadow-lg w-full focus:ring-2 focus:ring-[#d7a31a]"
             />
           </motion.div>
         </motion.div>

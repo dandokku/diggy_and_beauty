@@ -17,7 +17,7 @@ const Modal = ({ product, onClose, onAddToCart }) => {
       >
         <FiX
           size={28}
-          className="absolute top-4 right-4 cursor-pointer hover:text-primary transition"
+          className="absolute top-4 right-4 cursor-pointer hover:text-[#d7a31a] transition"
           onClick={onClose}
         />
         <img src={product.image} alt={product.name} className="w-full rounded-lg mb-6" />
@@ -26,7 +26,7 @@ const Modal = ({ product, onClose, onAddToCart }) => {
           This wig will give you soft life + sweet girl era energy 😍✨.  
           100% luxury, no wahala.
         </p>
-        <p className="mt-2 text-primary text-xl">₦{product.price}</p>
+        <p className="mt-2 text-[#d7a31a] text-xl">₦{product.price}</p>
 
         <motion.button
           onClick={onAddToCart}
@@ -35,7 +35,7 @@ const Modal = ({ product, onClose, onAddToCart }) => {
             rotate: [-3, 3, -3, 3, 0],
             transition: { type: "spring", stiffness: 500, damping: 10 }
           }}
-          className="mt-6 bg-primary text-bg px-6 py-3 rounded-lg uppercase font-bold tracking-wide cursor-pointer hover:bg-accent transition"
+          className="mt-6 bg-[#d7a31a] text-bg px-6 py-3 rounded-lg uppercase font-bold tracking-wide cursor-pointer hover:bg-accent transition"
         >
           Add to Cart 💅🏽
         </motion.button>

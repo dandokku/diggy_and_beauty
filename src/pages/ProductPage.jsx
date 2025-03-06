@@ -61,7 +61,7 @@ const ProductPage = () => {
     <div className="bg-lightbg min-h-screen pt-24 mt-16">
       <div className="container mx-auto p-6 sm:p-10">
         <div className="flex justify-between items-center mb-10 relative">
-          <h1 className="md:text-4xl text-xl font-bold text-center text-primary glitter-text">
+          <h1 className="md:text-4xl text-xl font-bold text-center text-[#d7a31a] glitter-text">
             Our Products
           </h1>
 
@@ -80,7 +80,7 @@ const ProductPage = () => {
               <input
                 type="text"
                 placeholder="Search..."
-                className="w-full px-4 py-2 text-bg outline-none"
+                className="w-full px-4 py-2 text-[#1a1a1a] outline-none"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
               />
@@ -90,9 +90,9 @@ const ProductPage = () => {
             {!showSearch && (
               <button
                 onClick={() => setShowSearch(true)}
-                className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
+                className="bg-white p-3 rounded-full shadow-lg hover:bg-[#d7a31a] transition"
               >
-                <FiSearch size={24} className="text-bg" />
+                <FiSearch size={24} className="text-[#1a1a1a]" />
               </button>
             )}
 
@@ -107,7 +107,7 @@ const ProductPage = () => {
                 <input
                   type="text"
                   placeholder="Search products..."
-                  className="w-full px-4 py-3 rounded-lg bg-white text-bg outline-none shadow-lg"
+                  className="w-full px-4 py-3 rounded-lg bg-white text-[#1a1a1a] outline-none shadow-lg"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
                   autoFocus
@@ -119,7 +119,7 @@ const ProductPage = () => {
 
         {/* Wigs Section 🦱 */}
         <div className="mb-16">
-          <h2 className="text-3xl font-bold text-primary glitter-text mb-6 text-center">
+          <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-6 text-center">
             Wigs Collection
           </h2>
           <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">
@@ -147,7 +147,7 @@ const ProductPage = () => {
 
         {/* Accessories Section 💄 */}
         <div>
-          <h2 className="text-3xl font-bold text-primary glitter-text mb-6 text-center">
+          <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-6 text-center">
             Accessories & Others
           </h2>
           <div className="columns-2 sm:columns-2 md:columns-3 lg:columns-4 gap-6 space-y-6">

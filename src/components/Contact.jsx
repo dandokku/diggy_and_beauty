@@ -2,8 +2,8 @@ import { motion } from "framer-motion";
 
 const Contact = () => {
   return (
-    <div className="py-16 bg-bg text-center">
-      <h2 className="text-4xl text-primary glitter-text mb-8">
+    <div className="py-16 bg-[#1a1a1a] text-center">
+      <h2 className="text-4xl text-[#d7a31a] glitter-text mb-8">
         Talk to Diggy 💅🏽✨
       </h2>
       <form className="max-w-lg mx-auto">
@@ -24,7 +24,7 @@ const Contact = () => {
         ></textarea>
         <motion.button
           whileTap={{ scale: 0.9 }}
-          className="bg-primary text-bg px-6 py-3 rounded-lg uppercase font-bold cursor-pointer hover:bg-accent transition"
+          className="bg-[#d7a31a] text-[#1a1a1a] px-6 py-3 rounded-lg uppercase font-bold cursor-pointer hover:bg-[#bd8cbf] cursor-pointer transition"
         >
           Send Message
         </motion.button>

@@ -9,7 +9,7 @@ const AboutCard = ({ title, description }) => {
       transition={{ duration: 0.8 }}
     >
       <h3 className="text-2xl text-primary font-bold mb-4">{title}</h3>
-      <p className="text-text leading-loose">{description}</p>
+      <p className="text-[#212121] leading-loose">{description}</p>
     </motion.div>
   );
 };

@@ -32,7 +32,7 @@ const ScrollToTop = () => {
       transition={{ duration: 0.5, ease: "easeInOut" }}
       onClick={scrollToTop}
     >
-      <button className="bg-bg text-[#d7a31a] p-4 rounded-full shadow-lg cursor-pointer hover:bg-accent transition-all">
+      <button className="bg-[#1a1a1a] text-[#d7a31a] p-4 rounded-full shadow-lg cursor-pointer hover:bg-[#bd8cbf] transition-all">
         <FaArrowUp className="text-2xl animate-pulse" />
       </button>
     </motion.div>

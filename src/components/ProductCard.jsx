@@ -14,15 +14,15 @@ const renderStars = (rating = 0) => {
     <div className="flex items-center gap-1 mt-2">
       {/* Full Stars */}
       {Array.from({ length: fullStars }).map((_, i) => (
-        <FaStar key={`full-${i}`} className="text-primary text-lg" />
+        <FaStar key={`full-${i}`} className="text-[#d7a31a] text-lg" />
       ))}
 
       {/* Half Star */}
-      {halfStar === 1 && <FaStarHalfAlt className="text-primary text-lg" />}
+      {halfStar === 1 && <FaStarHalfAlt className="text-[#d7a31a] text-lg" />}
 
       {/* Empty Stars */}
       {Array.from({ length: emptyStars }).map((_, i) => (
-        <FaRegStar key={`empty-${i}`} className="text-primary text-lg" />
+        <FaRegStar key={`empty-${i}`} className="text-[#d7a31a] text-lg" />
       ))}
     </div>
   );
@@ -54,7 +54,7 @@ const ProductCard = ({ product }) => {
         >
           <button
             onClick={handleAddToCart}
-            className="bg-primary text-white p-3 rounded-full flex items-center justify-center hover:bg-accent transition"
+            className="bg-[#d7a31a] text-white p-3 rounded-full flex items-center justify-center hover:bg-[#bd8cbf] transition"
           >
             <FiShoppingCart size={24} />
           </button>
@@ -64,9 +64,9 @@ const ProductCard = ({ product }) => {
       {/* Product Details */}
       <div className="p-4">
         <Link to={`/product/${product.id}`}>
-          <h2 className="text-text text-lg font-bold">{product.name}</h2>
+          <h2 className="text-[#212121] text-lg font-bold">{product.name}</h2>
           {renderStars(product.rating)}
-          <p className="text-primary text-lg mt-2">₦{product.price}</p>
+          <p className="text-[#d7a31a] text-lg mt-2">₦{product.price}</p>
         </Link>
       </div>
     </div>

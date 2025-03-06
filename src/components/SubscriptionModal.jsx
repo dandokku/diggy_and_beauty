@@ -30,13 +30,13 @@ const SubscriptionModal = ({ show, onClose }) => {
         <motion.div
           whileHover={{ rotate: 180, scale: 1.2 }}
           transition={{ duration: 0.3 }}
-          className="absolute top-4 right-4 cursor-pointer text-white hover:text-primary"
+          className="absolute top-4 right-4 cursor-pointer text-white hover:text-[#d7a31a]"
           onClick={onClose}
         >
           <FiX size={24} />
         </motion.div>
 
-        <h2 className="text-2xl font-bold text-primary mb-4 glitter-text">
+        <h2 className="text-2xl font-bold text-[#d7a31a] mb-4 glitter-text">
           Subscribe to Our Newsletter 📩
         </h2>
         <p className="text-white mb-6">
@@ -46,12 +46,12 @@ const SubscriptionModal = ({ show, onClose }) => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full p-3 rounded-md bg-lightbg text-bg mb-4 outline-none focus:ring-2 ring-primary"
+          className="w-full p-3 rounded-md bg-lightbg text-[#1a1a1a] mb-4 outline-none focus:ring-2 ring-[#d7a31a]"
         />
         <Button
           text="Subscribe"
           onClick={onClose}
-          className="bg-primary text-bg py-2 px-6 rounded-md hover:bg-[#b48f18] transition duration-300"
+          className="bg-[#d7a31a] text-[#1a1a1a] py-2 px-6 rounded-md hover:bg-[#b48f18] transition duration-300"
         />
       </div>
     </motion.div>

@@ -8,7 +8,7 @@ const Cart = () => {
   return (
     <div className="bg-lightbg min-h-screen pt-24">
       <div className="container mx-auto p-10">
-        <h1 className="text-4xl font-bold glitter-text mb-10 text-center">
+        <h1 className="text-4xl font-bold glitter[#212121] mb-10 text-center">
           Your Cart 🛒
         </h1>
 
@@ -31,17 +31,17 @@ const Cart = () => {
                       className="w-20 h-20 object-cover rounded-lg"
                     />
                     <div>
-                      <h2 className="text-text text-lg font-bold">
+                      <h2 className="text-[#212121] text-lg font-bold">
                         {item.name}
                       </h2>
-                      <p className="text-primary">₦{item.price}</p>
+                      <p className="text-[#d7a31a]">₦{item.price}</p>
                       <p className="text-sm">Quantity: {item.quantity}</p>
                     </div>
                   </div>
 
                   <button
                     onClick={() => removeFromCart(item.id)}
-                    className="text-bg hover:text-primary transition"
+                    className="text-[#1a1a1a] hover:text-[#d7a31a] transition"
                   >
                     <FiTrash size={24} />
                   </button>
@@ -50,7 +50,7 @@ const Cart = () => {
             </div>
 
             <div className="mt-10 text-center">
-              <p className="text-primary text-2xl mb-6">
+              <p className="text-[#d7a31a] text-2xl mb-6">
                 Total: ₦{getTotalPrice()}
               </p>
 
@@ -63,7 +63,7 @@ const Cart = () => {
 
               <button
                 onClick={clearCart}
-                className="mt-6 bg-text text-white px-8 py-3 rounded-lg hover:bg-primary transition"
+                className="mt-6 bg[#212121] text-white px-8 py-3 rounded-lg hover:bg-[#d7a31a] transition"
               >
                 Clear Cart 🗑️
               </button>
