@@ -1,13 +1,38 @@
 import { Link } from "react-router-dom";
 import { FiShoppingCart } from "react-icons/fi";
 import { motion } from "framer-motion";
-import { useCart } from "../context/CartContext"; // Import useCart hook
+import { useCart } from "../context/CartContext";
+import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
+
+// Function to Render Stars
+const renderStars = (rating = 0) => {
+  const fullStars = Math.floor(rating); // Full stars
+  const halfStar = rating % 1 !== 0 ? 1 : 0; // Half star
+  const emptyStars = Math.max(0, 5 - (fullStars + halfStar)); // Prevent Negative Numbers
+
+  return (
+    <div className="flex items-center gap-1 mt-2">
+      {/* Full Stars */}
+      {Array.from({ length: fullStars }).map((_, i) => (
+        <FaStar key={`full-${i}`} className="text-primary text-lg" />
+      ))}
+
+      {/* Half Star */}
+      {halfStar === 1 && <FaStarHalfAlt className="text-primary text-lg" />}
+
+      {/* Empty Stars */}
+      {Array.from({ length: emptyStars }).map((_, i) => (
+        <FaRegStar key={`empty-${i}`} className="text-primary text-lg" />
+      ))}
+    </div>
+  );
+};
 
 const ProductCard = ({ product }) => {
-  const { addToCart } = useCart(); // Access addToCart from context
+  const { addToCart } = useCart(); // Context Hook for Cart
 
   const handleAddToCart = () => {
-    addToCart(product); // Add product to cart
+    addToCart(product);
   };
 
   return (
@@ -19,7 +44,8 @@ const ProductCard = ({ product }) => {
           alt={product.name}
           className="w-full h-full object-cover object-center"
         />
-        {/* Cart Icon (Visible on Hover) */}
+
+        {/* Add to Cart Button Hover Effect */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileHover={{ opacity: 1, y: 0 }}
@@ -39,8 +65,9 @@ const ProductCard = ({ product }) => {
       <div className="p-4">
         <Link to={`/product/${product.id}`}>
           <h2 className="text-text text-lg font-bold">{product.name}</h2>
+          {renderStars(product.rating)}
+          <p className="text-primary text-lg mt-2">₦{product.price}</p>
         </Link>
-        <p className="text-primary text-lg mt-2">₦{product.price}</p>
       </div>
     </div>
   );
