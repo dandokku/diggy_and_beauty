@@ -1,12 +1,12 @@
 import { useParams } from "react-router-dom";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { FaWhatsapp, FaEnvelope, FaTimes } from "react-icons/fa";
 import products from "../data/products.json";
 
 const ProductDetails = () => {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
-
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   const toggleSidebar = () => {
@@ -47,43 +47,52 @@ const ProductDetails = () => {
         initial={{ x: "100%" }}
         animate={{ x: isSidebarOpen ? 0 : "100%" }}
         transition={{ type: "spring", stiffness: 100, damping: 20 }}
-        className={`fixed top-[50%] rounded-md right-0 w-[300px] h-[50%] bg-white shadow-lg z-50 p-6 flex flex-col gap-8 ${
+        className={`fixed top-[10%] right-0 w-[300px] h-[100vh] bg-white shadow-lg z-50 p-8 rounded-l-xl ${
           isSidebarOpen ? "block" : "hidden"
         }`}
       >
         {/* Sidebar Close Button */}
         <button
           onClick={toggleSidebar}
-          className="self-end text-white text-xl font-bold"
+          className="self-end cursor-pointer text-[#212121] text-2xl font-bold t "
         >
-          ✖
+          <FaTimes />
         </button>
 
-        <p className="text-[#212121] font-bold mb-4">Wherever you are, we'll be delighted to assist you</p>
+        <h2 className="text-2xl font-bold text-[#212121] mb-6">
+          How would you like to reach us?
+        </h2>
+        <p className="text-[#555555] mb-8">
+          Wherever you are, we'll be delighted to assist you.
+        </p>
 
-        <a
-          href={`https://wa.me/2348104618586?text=Hello, I'm interested in ${product.name}`}
-          target="_blank"
-          rel="noopener noreferrer"
-          onClick={() => setIsSidebarOpen(false)}
-          className="bg-accent text-[#212121] py-3 px-6 rounded-lg text-lg text-center font-semibold hover:bg-primary transition duration-300"
-        >
-          WhatsApp
-        </a>
+        <div className="flex flex-col gap-6">
+          <a
+            href={`https://wa.me/2348104618586?text=Hello, I'm interested in ${product.name}`}
+            target="_blank"
+            rel="noopener noreferrer"
+            onClick={() => setIsSidebarOpen(false)}
+            className="flex items-center gap-3 bg-accent text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-primary transition duration-300"
+          >
+            <FaWhatsapp className="text-2xl" />
+            WhatsApp
+          </a>
 
-        <a
-          href={`mailto:jesulobadaniel1@gmail.com?subject=Enquiry about ${product.name}`}
-          onClick={() => setIsSidebarOpen(false)}
-          className="bg-primary text-[#212121] py-3 px-6 rounded-lg text-lg text-center font-semibold hover:bg-accent transition duration-300"
-        >
-          Email
-        </a>
+          <a
+            href={`mailto:jesulobadaniel1@gmail.com?subject=Enquiry about ${product.name}`}
+            onClick={() => setIsSidebarOpen(false)}
+            className="flex items-center gap-3 bg-primary text-[#212121] py-3 px-6 rounded-lg text-lg font-semibold hover:bg-accent transition duration-300"
+          >
+            <FaEnvelope className="text-2xl" />
+            Email
+          </a>
+        </div>
       </motion.div>
 
       {/* Overlay Background */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40"
+          className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm z-40 transition-all duration-300"
           onClick={toggleSidebar}
         ></div>
       )}
