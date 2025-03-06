@@ -23,6 +23,17 @@ const ProductPage = () => {
     };
   }, []);
 
+  // Close on ESC Key
+  useEffect(() => {
+    const handleEsc = (e) => {
+      if (e.key === "Escape") setShowSearch(false);
+    };
+    document.addEventListener("keydown", handleEsc);
+    return () => {
+      document.removeEventListener("keydown", handleEsc);
+    };
+  }, []);
+
   const cardAnimation = {
     hidden: { opacity: 0, y: 50 },
     visible: (index) => ({
@@ -36,7 +47,7 @@ const ProductPage = () => {
     }),
   };
 
-  // Filtering Products Based on Query
+  // Filter Products
   const filteredProducts = products.filter((product) =>
     product.name.toLowerCase().includes(query.toLowerCase())
   );
@@ -50,12 +61,13 @@ const ProductPage = () => {
     <div className="bg-lightbg min-h-screen pt-24 mt-16">
       <div className="container mx-auto p-6 sm:p-10">
         <div className="flex justify-between items-center mb-10 relative">
-          <h1 className="text-4xl font-bold text-center text-primary glitter-text">
+          <h1 className="md:text-4xl text-xl font-bold text-center text-primary glitter-text">
             Our Products
           </h1>
 
           {/* Search Feature 🔍 */}
-          <div className="flex items-center gap-3" ref={searchRef}>
+          <div ref={searchRef} className="flex items-center gap-3">
+            {/* Desktop Search Input */}
             <motion.div
               initial={{ width: 0, opacity: 0 }}
               animate={{
@@ -74,27 +86,35 @@ const ProductPage = () => {
               />
             </motion.div>
 
-            {/* Search Button */}
-            <button
-              onClick={() => setShowSearch(!showSearch)}
-              className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
-            >
-              <FiSearch size={24} className="text-bg" />
-            </button>
-          </div>
+            {/* Search Icon Button (Desktop + Mobile) */}
+            {!showSearch && (
+              <button
+                onClick={() => setShowSearch(true)}
+                className="bg-white p-3 rounded-full shadow-lg hover:bg-primary transition"
+              >
+                <FiSearch size={24} className="text-bg" />
+              </button>
+            )}
 
-          {/* Mobile Search Input */}
-          {showSearch && (
-            <div className="w-full block md:hidden mt-6">
-              <input
-                type="text"
-                placeholder="Search..."
-                className="w-full px-4 py-3 rounded-lg bg-white text-bg outline-none shadow-lg"
-                value={query}
-                onChange={(e) => setQuery(e.target.value)}
-              />
-            </div>
-          )}
+            {/* Mobile Search Input */}
+            {showSearch && (
+              <motion.div
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={{ opacity: 1, scale: 1 }}
+                transition={{ duration: 0.3, ease: "easeInOut" }}
+                className="w-full md:hidden"
+              >
+                <input
+                  type="text"
+                  placeholder="Search products..."
+                  className="w-full px-4 py-3 rounded-lg bg-white text-bg outline-none shadow-lg"
+                  value={query}
+                  onChange={(e) => setQuery(e.target.value)}
+                  autoFocus
+                />
+              </motion.div>
+            )}
+          </div>
         </div>
 
         {/* Wigs Section 🦱 */}

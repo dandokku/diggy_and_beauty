@@ -30,7 +30,7 @@ const Hero = () => {
   transition={{ delay: 1.5, duration: 1 }}
   className="mt-8"
 >
-  <Link to="/product">
+  <Link to="/products">
     <Button text="Shop Now" />
   </Link>
 </motion.div>
