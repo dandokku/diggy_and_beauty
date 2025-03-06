@@ -54,7 +54,7 @@ const ProductDetails = () => {
         {/* Sidebar Close Button */}
         <button
           onClick={toggleSidebar}
-          className="self-end cursor-pointer text-[#212121] text-2xl font-bold t "
+          className="self-end cursor-pointer text-[#212121] text-2xl font-bold"
         >
           <FaTimes />
         </button>
@@ -89,10 +89,10 @@ const ProductDetails = () => {
         </div>
       </motion.div>
 
-      {/* Overlay Background */}
+      {/* Clickable Transparent Overlay without Darkness */}
       {isSidebarOpen && (
         <div
-          className="fixed inset-0 bg-black bg-opacity-20 backdrop-blur-sm z-40 transition-all duration-300"
+          className="fixed inset-0 z-40 cursor-pointer"
           onClick={toggleSidebar}
         ></div>
       )}
