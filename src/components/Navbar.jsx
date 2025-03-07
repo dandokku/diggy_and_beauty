@@ -127,7 +127,7 @@ const Navbar = () => {
         initial={{ x: "100%" }}
         animate={{ x: open ? 0 : "100%" }}
         transition={{ duration: 0.6, ease: "easeInOut" }}
-        className={`fixed top-0 right-0 w-4/5 h-full bg-[#1a1818] text-white flex flex-col items-center gap-10 pt-20 z-40 ${
+        className={`fixed top-0 right-0 w-[50%] h-full bg-[#1a1818] text-white flex flex-col items-center gap-10 pt-28 z-40 ${
           open ? "pointer-events-auto" : "pointer-events-none"
         }`}
         onClick={(e) => e.stopPropagation()}
@@ -136,7 +136,7 @@ const Navbar = () => {
           <motion.li
             key={index}
             whileHover={{ scale: 1.1 }}
-            className="text-lg uppercase tracking-wide hover:text-primary transition"
+            className="text-lg uppercase tracking-wide hover:text-primary transition decoration-0 list-none"
           >
             <Link
               to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
