@@ -6,9 +6,9 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 
 // Function to Render Stars
 const renderStars = (rating = 0) => {
-  const fullStars = Math.floor(rating); // Full stars
-  const halfStar = rating % 1 !== 0 ? 1 : 0; // Half star
-  const emptyStars = Math.max(0, 5 - (fullStars + halfStar)); // Prevent Negative Numbers
+  const fullStars = Math.floor(rating); 
+  const halfStar = rating % 1 !== 0 ? 1 : 0; 
+  const emptyStars = Math.max(0, 5 - (fullStars + halfStar)); 
 
   return (
     <div className="flex items-center gap-1 mt-2">
@@ -29,7 +29,7 @@ const renderStars = (rating = 0) => {
 };
 
 const ProductCard = ({ product }) => {
-  const { addToCart } = useCart(); // Context Hook for Cart
+  const { addToCart } = useCart(); 
 
   const handleAddToCart = () => {
     addToCart(product);
@@ -45,7 +45,7 @@ const ProductCard = ({ product }) => {
           className="w-full h-full object-cover object-center"
         />
 
-        {/* Add to Cart Button Hover Effect */}
+       
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileHover={{ opacity: 1, y: 0 }}

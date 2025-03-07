@@ -1,6 +1,10 @@
-TODO:
-- Don't forget to change the whatsapp numberrrr and emaillll
-- fix mini design issues
-- make contact form to work
+To change the Email and Phone number, go to line 71 and 82 in ProductDetails.jsx  (inside the pages folder)
 
-- remove all traces of gpt
+
+to run the project, navigate into the project's folder in your terminal and type: npm run dev
+
+all the packages and dependencies you need are already installed, so you don't have to do much.
+
+you might see error with the motion stuff in the codes, but it's not an error (so just ignore it)
+
+IF YOU'VE GAT QUESTIONS, ASK ME!

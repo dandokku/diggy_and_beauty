@@ -7,4 +7,4 @@ const CartPage = () => {
   );
 };
 
-export default CartPage; // 👈 This is the missing line
+export default CartPage; 

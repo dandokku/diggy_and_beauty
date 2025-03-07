@@ -32,7 +32,6 @@ const ProductDetails = () => {
           <p className="text-white text-xl">₦{product.price}</p>
           <p className="text-white leading-relaxed">{product.description}</p>
 
-          {/* Contact Us Button */}
           <button
             onClick={toggleSidebar}
             className="bg-[#d7a31a] cursor-pointer text-white py-3 mb-8 px-6 rounded-lg text-lg font-semibold shadow-md hover:bg-accent transition duration-300"
@@ -68,7 +67,7 @@ const ProductDetails = () => {
 
         <div className="flex flex-col gap-6">
           <a
-            href={`https://wa.me/2348104618586?text=Hello, I'm interested in ${product.name}`}
+            href={`https://wa.me/2348104618586?text=Hello, Hello Diggy & Beauty 💄✨, I'm interested in buying ${product.name} at ${product.price}, is it still available`}
             target="_blank"
             rel="noopener noreferrer"
             onClick={() => setIsSidebarOpen(false)}
@@ -89,7 +88,6 @@ const ProductDetails = () => {
         </div>
       </motion.div>
 
-      {/* Clickable Transparent Overlay without Darkness */}
       {isSidebarOpen && (
         <div
           className="fixed inset-0 z-40 cursor-pointer"

@@ -4,70 +4,66 @@
 @tailwind components;
 @tailwind utilities;
 
-
 body {
-    background: linear-gradient(145deg, #1a1a1a, #121212);
-  }
-  
-  html {  
-    scroll-behavior: smooth;
-  }
-  
-  h1 span {
-    background: linear-gradient(90deg, #d7a31a, #bd8cbf);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
+  background: linear-gradient(145deg, #1a1a1a, #121212);
+}
 
-  @keyframes glitter {
-    0%, 100% {
-      background-position: 0% 50%;
-    }
-    50% {
-      background-position: 100% 50%;
-    }
-  }
-  
-  .glitter-text {
-    background: linear-gradient(90deg, #d7a31a, #bd8cbf, #ffffff);
-    background-size: 400% 400%;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    animation: glitter 6s ease infinite;
-  }
-  
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-  }
-  
+html {
+  scroll-behavior: smooth;
+}
 
-  button:hover {
-    box-shadow: 0 0 15px rgba(215, 163, 26, 0.7), 0 0 25px rgba(215, 163, 26, 0.5);
-    transform: translateY(-5px);
-  }
-  
-  .footer-icon:hover {
-    transform: scale(1.2);
-    transition: all 0.3s ease-in-out;
-  }
-  
-  
+h1 span {
+  background: linear-gradient(90deg, #d7a31a, #bd8cbf);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-  .dropdown span {
-    display: inline;
+@keyframes glitter {
+  0%,
+  100% {
+    background-position: 0% 50%;
   }
-  
-  .dropdown span > span {
-    background: rgba(130, 212, 124, 0.3); /* Accent Green Glow */
-    padding: 0 4px;
-    border-radius: 4px;
+  50% {
+    background-position: 100% 50%;
   }
-  
-  .glitter-text {
-    background: linear-gradient(135deg, #d7a31a 0%, #82d47c 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-  }
-  
+}
+
+.glitter-text {
+  background: linear-gradient(90deg, #d7a31a, #bd8cbf, #ffffff);
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: glitter 6s ease infinite;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+button:hover {
+  box-shadow: 0 0 15px rgba(215, 163, 26, 0.7), 0 0 25px rgba(215, 163, 26, 0.5);
+  transform: translateY(-5px);
+}
+
+.footer-icon:hover {
+  transform: scale(1.2);
+  transition: all 0.3s ease-in-out;
+}
+
+.dropdown span {
+  display: inline;
+}
+
+.dropdown span > span {
+  background: rgba(130, 212, 124, 0.3); /* Accent Green Glow */
+  padding: 0 4px;
+  border-radius: 4px;
+}
+
+.glitter-text {
+  background: linear-gradient(135deg, #d7a31a 0%, #82d47c 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}

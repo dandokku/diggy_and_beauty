@@ -65,7 +65,7 @@ const ProductPage = () => {
             Our Products
           </h1>
 
-          {/* Search Feature 🔍 */}
+          {/* Search Feature */}
           <div ref={searchRef} className="flex items-center gap-3">
             {/* Desktop Search Input */}
             <motion.div
@@ -118,7 +118,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Wigs Section 🦱 */}
+        {/* Wigs Section */}
         <div className="mb-16">
           <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-6 text-center">
             Wigs Collection
@@ -146,7 +146,7 @@ const ProductPage = () => {
           </div>
         </div>
 
-        {/* Accessories Section 💄 */}
+        {/* Accessories Section */}
         <div>
           <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-6 text-center">
             Accessories & Others

@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-[#1a1818] text-white py-12">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left justify-between">
         <div>
           <h3 className="text-[#d7a31a] text-xl font-bold uppercase mb-4">About Us</h3>
           <p>
@@ -28,7 +28,7 @@ const Footer = () => {
         </div>
 
         <div>
-          <h3 className="text-[#d7a31a] text-xl font-bold uppercase mb-4">Contact Us</h3>
+          <h3 className="text-[#d7a31a] text-xl font-bold uppercase mb-4 text-center">Contact Us</h3>
           <div className="flex justify-center gap-4">
             <FiInstagram size={24} />
             <FiTwitter size={24} />

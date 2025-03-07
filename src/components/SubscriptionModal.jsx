@@ -1,15 +1,15 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
-import { FiX } from "react-icons/fi"; // Close Icon
+import { FiX } from "react-icons/fi"; 
 import Button from "./Button";
 
 const SubscriptionModal = ({ show, onClose }) => {
   useEffect(() => {
     if (show) {
-      document.body.style.overflow = "hidden"; // Lock Scroll
+      document.body.style.overflow = "hidden"; 
     }
     return () => {
-      document.body.style.overflow = "auto"; // Unlock Scroll
+      document.body.style.overflow = "auto"; 
     };
   }, [show]);
 
@@ -46,7 +46,7 @@ const SubscriptionModal = ({ show, onClose }) => {
         <input
           type="email"
           placeholder="Enter your email"
-          className="w-full p-3 rounded-md bg-lightbg text-[#1a1a1a] mb-4 outline-none focus:ring-2 ring-[#d7a31a]"
+          className="w-full p-3 rounded-md bg-lightbg border border-white text-[#1a1a1a] mb-4 outline-none focus:ring-2 ring-[#d7a31a]"
         />
         <Button
           text="Subscribe"

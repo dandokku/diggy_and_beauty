@@ -7,11 +7,11 @@ import SubscriptionModal from "./SubscriptionModal";
 import { useCart } from "../context/CartContext";
 
 const Navbar = () => {
-  const { cart } = useCart(); // Cart Context
+  const { cart } = useCart(); 
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [showModal, setShowModal] = useState(false);
-  const [showSearch, setShowSearch] = useState(false);
+  // const [showSearch, setShowSearch] = useState(false);
 
   // Scroll Background
   useEffect(() => {
@@ -22,7 +22,7 @@ const Navbar = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  // Show Modal Once
+  // Show Subcription Modal Just Once
   useEffect(() => {
     const hasSubscribed = sessionStorage.getItem("diggy_subscribed");
     if (!hasSubscribed) {
@@ -37,7 +37,7 @@ const Navbar = () => {
 
   const toggleMenu = () => {
     setOpen(!open);
-    document.body.style.overflow = open ? "auto" : "hidden"; // Disable scroll
+    document.body.style.overflow = open ? "auto" : "hidden"; 
   };
 
   useEffect(() => {
@@ -142,7 +142,7 @@ const Navbar = () => {
               to={link === "Home" ? "/" : `/${link.toLowerCase()}`}
               onClick={() => {
                 toggleMenu();
-                document.body.style.overflow = "auto"; // Enable scroll after close
+                document.body.style.overflow = "auto";
               }}
             >
               {link}
@@ -163,7 +163,7 @@ const Navbar = () => {
       )}
 
       {/* Search Overlay */}
-      <SearchOverlay show={showSearch} onClose={() => setShowSearch(false)} />
+      {/* <SearchOverlay show={showSearch} onClose={() => setShowSearch(false)} /> */}
 
       {/* Subscription Modal */}
       <SubscriptionModal show={showModal} onClose={closeModal} />

@@ -1,11 +1,15 @@
 import { motion } from "framer-motion";
 import { FaHeart, FaStar, FaUsers } from "react-icons/fa";
-import aboutImage from "../assets/images/Logo1.png"
+import aboutImage from "../assets/images/Logo1.png";
 
 const AboutPage = () => {
   const fadeIn = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.8, ease: "easeOut" },
+    },
   };
 
   const stagger = {
@@ -56,9 +60,10 @@ const AboutPage = () => {
             Who We Are
           </h2>
           <p className="text-white leading-loose">
-            At Diggy & Beauty, we believe that every woman deserves to feel confident and beautiful.
-            Our passion is to deliver high-quality wigs, accessories, and beauty products that
-            empower you to express your unique style.
+            At Diggy & Beauty, we believe that every woman deserves to feel
+            confident and beautiful. Our passion is to deliver high-quality
+            wigs, accessories, and beauty products that empower you to express
+            your unique style.
           </p>
         </motion.div>
       </motion.div>
@@ -136,8 +141,8 @@ const AboutPage = () => {
           viewport={{ once: true }}
           className="text-white max-w-3xl mx-auto leading-loose"
         >
-          To empower women with confidence by providing top-quality wigs,
-          beauty accessories, and exceptional customer service.
+          To empower women with confidence by providing top-quality wigs, beauty
+          accessories, and exceptional customer service.
         </motion.p>
       </div>
 
