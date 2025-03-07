@@ -1,51 +1,165 @@
 import { motion } from "framer-motion";
-import AboutCard from "../components/AboutCard";
+import { FaHeart, FaStar, FaUsers } from "react-icons/fa";
+import aboutImage from "../assets/images/Logo1.png"
 
 const AboutPage = () => {
+  const fadeIn = {
+    hidden: { opacity: 0, y: 50 },
+    visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  };
+
+  const stagger = {
+    hidden: {},
+    visible: {
+      transition: { staggerChildren: 0.2, delayChildren: 0.4 },
+    },
+  };
+
   return (
-    <section id="about" className="bg-lightbg mt-16 py-20 text-[#212121]">
-      <div className="container mx-auto px-6">
-        {/* Title */}
-        <motion.h2
-          className="text-4xl font-bold text-center glitter-text mb-10 uppercase"
-          initial={{ opacity: 0, y: -30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+    <div className="bg-lightbg min-h-screen pt-24 mt-16">
+      {/* Hero Section */}
+      <div className="text-center py-16 ">
+        <motion.h1
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          className="text-4xl md:text-5xl font-bold text-[#d7a31a] glitter-text"
         >
           About Us
-        </motion.h2>
-
-        {/* Description */}
+        </motion.h1>
         <motion.p
-          className="text-center max-w-3xl mx-auto text-lg mb-12 text-whitetext"
-          initial={{ opacity: 0, y: 30 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.2 }}
+          initial="hidden"
+          animate="visible"
+          variants={fadeIn}
+          className="text-lg text-white mt-4 max-w-2xl mx-auto"
         >
-          Welcome to Diggy & Beauty where passion meets creativity. We are a beauty brand committed to providing top-quality beauty products and services that empower women to express themselves confidently.
+          Unveiling Beauty, One Product at a Time ✨
         </motion.p>
+      </div>
 
-        {/* Mission & Vision Cards */}
-        <div className="grid md:grid-cols-2 gap-12">
-          <AboutCard
-            title="Our Mission"
-            description="To enhance the beauty and confidence of every woman by providing premium beauty products and services."
-          />
-          <AboutCard
-            title="Our Vision"
-            description="To become a leading beauty brand that inspires women across the globe to embrace their natural beauty."
-          />
-        </div>
+      {/* About Section */}
+      <motion.div
+        variants={stagger}
+        initial="hidden"
+        animate="visible"
+        className="container mx-auto p-6 sm:p-10 grid md:grid-cols-2 gap-10 items-center mb-7 pb"
+      >
+        <motion.img
+          src={aboutImage}
+          alt="About Us"
+          variants={fadeIn}
+          className="rounded-lg shadow-lg w-full h-[60vh] object-cover"
+        />
 
-        {/* Why Choose Us Section */}
-        <div className="mt-16 text-center text-whitetext">
-          <h3 className="text-3xl text-[#d7a31a] mb-8 uppercase font-bold">Why Choose Us?</h3>
-          <p className="max-w-2xl mx-auto text-lg leading-loose">
-            At Diggy & Beauty, we combine high-quality products, personalized services, and excellent customer care to give you an experience like no other.
+        <motion.div variants={fadeIn}>
+          <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-4">
+            Who We Are
+          </h2>
+          <p className="text-white leading-loose">
+            At Diggy & Beauty, we believe that every woman deserves to feel confident and beautiful.
+            Our passion is to deliver high-quality wigs, accessories, and beauty products that
+            empower you to express your unique style.
           </p>
+        </motion.div>
+      </motion.div>
+
+      {/* Why Choose Us Section */}
+      <div className="py-20 bg-[#11182]">
+        <div className="container mx-auto text-center">
+          <h2 className="text-3xl font-bold text-[#d7a31a] glitter-text mb-10 mt-10">
+            Why Choose Us?
+          </h2>
+          <motion.div
+            variants={stagger}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="grid md:grid-cols-3 gap-10"
+          >
+            <motion.div
+              variants={fadeIn}
+              className="p-8 bg-lightbg rounded-lg shadow-lg hover:scale-105 transition"
+            >
+              <FaHeart className="text-5xl text-[#d7a31a] mx-auto mb-4" />
+              <h3 className="text-xl text-[#d7a31a] font-semibold">
+                Quality & Care
+              </h3>
+              <p className="text-white mt-4">
+                We prioritize premium quality products that enhance your beauty.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              className="p-8 bg-lightbg rounded-lg shadow-lg hover:scale-105 transition"
+            >
+              <FaUsers className="text-5xl text-[#d7a31a] mx-auto mb-4" />
+              <h3 className="text-xl text-[#d7a31a] font-semibold">
+                Customer Satisfaction
+              </h3>
+              <p className="text-white mt-4">
+                Your happiness is our top priority. We ensure 100% satisfaction.
+              </p>
+            </motion.div>
+
+            <motion.div
+              variants={fadeIn}
+              className="p-8 bg-lightbg rounded-lg shadow-lg hover:scale-105 transition"
+            >
+              <FaStar className="text-5xl text-[#d7a31a] mx-auto mb-4" />
+              <h3 className="text-xl text-[#d7a31a] font-semibold">
+                Affordable Luxury
+              </h3>
+              <p className="text-white mt-4">
+                Luxury products at prices that won't break the bank.
+              </p>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
-    </section>
+
+      {/* Mission Statement */}
+      <div className="text-center py-16">
+        <motion.h2
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          className="text-3xl font-bold text-[#d7a31a] glitter-text mb-6"
+        >
+          Our Mission
+        </motion.h2>
+        <motion.p
+          initial="hidden"
+          whileInView="visible"
+          variants={fadeIn}
+          viewport={{ once: true }}
+          className="text-white max-w-3xl mx-auto leading-loose"
+        >
+          To empower women with confidence by providing top-quality wigs,
+          beauty accessories, and exceptional customer service.
+        </motion.p>
+      </div>
+
+      {/* CTA Section */}
+      <motion.div
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true }}
+        className="py-20 bg-[#82d47c] text-center rounded-xl shadow-lg mx-6 md:mx-20"
+      >
+        <h2 className="text-4xl font-bold text-[#111827] glitter-text">
+          Join Our Beauty Journey 💫
+        </h2>
+        <p className="text-[#291115] mt-4">
+          Discover products that transform your beauty experience.
+        </p>
+        <button className="bg-[#d7a31a] text-white px-6 py-3 rounded-full mt-6 shadow-lg hover:bg-[#111827] transition">
+          Shop Now
+        </button>
+      </motion.div>
+    </div>
   );
 };
 

@@ -9,14 +9,13 @@ const ProductPage = () => {
   const [query, setQuery] = useState("");
   const searchRef = useRef(null);
 
-  // Close Search when clicking outside
+  // Close Search on Outside Click
   useEffect(() => {
     const handleClickOutside = (e) => {
       if (searchRef.current && !searchRef.current.contains(e.target)) {
         setShowSearch(false);
       }
     };
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
@@ -60,6 +59,7 @@ const ProductPage = () => {
   return (
     <div className="bg-lightbg min-h-screen pt-24 mt-16">
       <div className="container mx-auto p-6 sm:p-10">
+        {/* Header + Search Bar */}
         <div className="flex justify-between items-center mb-10 relative">
           <h1 className="md:text-4xl text-xl font-bold text-center text-[#d7a31a] glitter-text">
             Our Products
@@ -79,10 +79,11 @@ const ProductPage = () => {
             >
               <input
                 type="text"
-                placeholder="Search..."
+                placeholder="Search Products..."
                 className="w-full px-4 py-2 text-[#1a1a1a] outline-none"
                 value={query}
                 onChange={(e) => setQuery(e.target.value)}
+                autoFocus={showSearch}
               />
             </motion.div>
 
@@ -106,7 +107,7 @@ const ProductPage = () => {
               >
                 <input
                   type="text"
-                  placeholder="Search products..."
+                  placeholder="Search Products..."
                   className="w-full px-4 py-3 rounded-lg bg-white text-[#1a1a1a] outline-none shadow-lg"
                   value={query}
                   onChange={(e) => setQuery(e.target.value)}
@@ -138,7 +139,7 @@ const ProductPage = () => {
                 </motion.div>
               ))
             ) : (
-              <p className="text-center text-white text-lg">
+              <p className="text-center text-white text-lg animate-bounce">
                 No Wigs Found 😢
               </p>
             )}
@@ -166,7 +167,7 @@ const ProductPage = () => {
                 </motion.div>
               ))
             ) : (
-              <p className="text-center text-white text-lg">
+              <p className="text-center text-white text-lg animate-bounce">
                 No Accessories Found 😢
               </p>
             )}

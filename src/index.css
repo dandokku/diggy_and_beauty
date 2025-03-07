@@ -54,3 +54,20 @@ body {
   }
   
   
+
+  .dropdown span {
+    display: inline;
+  }
+  
+  .dropdown span > span {
+    background: rgba(130, 212, 124, 0.3); /* Accent Green Glow */
+    padding: 0 4px;
+    border-radius: 4px;
+  }
+  
+  .glitter-text {
+    background: linear-gradient(135deg, #d7a31a 0%, #82d47c 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
