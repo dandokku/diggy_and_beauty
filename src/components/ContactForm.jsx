@@ -3,11 +3,9 @@ import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import { FiSend, FiLoader } from "react-icons/fi";
 
 const ContactForm = () => {
-    toast.success("Message Sent Successfully!");
-toast.error("Failed to Send Message!");
-
   const [form, setForm] = useState({ name: "", email: "", message: "" });
   const [loading, setLoading] = useState(false);
 
@@ -29,12 +27,30 @@ toast.error("Failed to Send Message!");
       .then(
         () => {
           setLoading(false);
-          alert("Message Sent Successfully!");
+          toast.success("Message sent successfully! We'll contact you soon.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
           setForm({ name: "", email: "", message: "" });
         },
         (error) => {
           setLoading(false);
-          alert("Something went wrong, please try again.");
+          toast.error("Failed to send message. Please try again later.", {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+            theme: "dark",
+          });
         }
       );
   };
@@ -42,57 +58,97 @@ toast.error("Failed to Send Message!");
   return (
     <motion.form
       onSubmit={handleSubmit}
-      className="space-y-6 bg-[#111827] p-8 rounded-lg shadow-lg"
+      className="w-full max-w-md space-y-6 bg-gray-900/50 backdrop-blur-sm p-8 rounded-xl border border-gray-700/50 shadow-xl"
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8 }}
+      transition={{ duration: 0.8, ease: "easeOut" }}
     >
-      <div>
-        <label className="block text-[#bd8cbf] uppercase mb-2">Name</label>
+      <motion.div
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.2 }}
+      >
+        <label className="block text-gray-300 text-sm font-medium mb-2">
+          Your Name
+        </label>
         <input
           type="text"
           name="name"
           value={form.name}
           onChange={handleChange}
-          className="w-full p-3 rounded bg-[#1a1818] text-white outline-none focus:ring-2 focus:ring-[#d7a31a]"
-          placeholder="Your Name"
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+          placeholder="John Doe"
           required
         />
-      </div>
+      </motion.div>
 
-      <div>
-        <label className="block text-[#bd8cbf] uppercase mb-2">Email</label>
+      <motion.div
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.3 }}
+      >
+        <label className="block text-gray-300 text-sm font-medium mb-2">
+          Email Address
+        </label>
         <input
           type="email"
           name="email"
           value={form.email}
           onChange={handleChange}
-          className="w-full p-3 rounded bg-[#1a1818] text-white outline-none focus:ring-2 focus:ring-[#d7a31a]"
-          placeholder="Your Email"
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+          placeholder="john@example.com"
           required
         />
-      </div>
+      </motion.div>
 
-      <div>
-        <label className="block text-[#bd8cbf] uppercase mb-2">Message</label>
+      <motion.div
+        initial={{ opacity: 0, x: -10 }}
+        animate={{ opacity: 1, x: 0 }}
+        transition={{ delay: 0.4 }}
+      >
+        <label className="block text-gray-300 text-sm font-medium mb-2">
+          Your Message
+        </label>
         <textarea
           name="message"
-          rows="4"
+          rows="5"
           value={form.message}
           onChange={handleChange}
-          className="w-full p-3 rounded bg-[#1a1818] text-white outline-none focus:ring-2 focus:ring-[#d7a31a]"
-          placeholder="Your Message"
+          className="w-full px-4 py-3 bg-gray-800/50 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-amber-500 focus:border-transparent transition-all"
+          placeholder="How can we help you?"
           required
         />
-      </div>
+      </motion.div>
 
-      <button
-        type="submit"
-        className="bg-[#d7a31a] rounded-md w-full py-3 uppercase text-[#1a1a1a] hover:bg-[#d7a31a]/80 transition"
-        disabled={loading}
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.5 }}
       >
-        {loading ? "Sending..." : "Send Message"}
-      </button>
+        <motion.button
+          type="submit"
+          disabled={loading}
+          whileHover={!loading ? { scale: 1.02 } : {}}
+          whileTap={!loading ? { scale: 0.98 } : {}}
+          className={`w-full py-3 px-6 rounded-lg font-medium flex items-center justify-center gap-2 ${
+            loading
+              ? "bg-amber-600/50 cursor-not-allowed"
+              : "bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700 cursor-pointer"
+          } text-white shadow-lg transition-all`}
+        >
+          {loading ? (
+            <>
+              <FiLoader className="animate-spin" />
+              Sending...
+            </>
+          ) : (
+            <>
+              <FiSend />
+              Send Message
+            </>
+          )}
+        </motion.button>
+      </motion.div>
     </motion.form>
   );
 };
